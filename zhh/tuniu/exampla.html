@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{margin: 0; padding: 0;}
+    table{
+      position: relative;
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      margin-bottom: 2px;
+      overflow: hidden;
+      transform:  rotatex(0deg);
+    }
+    td{
+      position: relative;
+      width: 33.33%;
+      padding-top: 12.98%;
+      border: solid 1px #fff;
+      overflow: hidden;
+    }
+    a{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%; 
+      left: 0;
+      color: #fff;
+      font-size: 16px;
+      text-align: center; 
+      vertical-align: middle;  
+      transform: translateY(-50%); 
+      background-color: #00c37d;
+      display: flex; 
+      justify-content: center; 
+       align-items: center; 
+    }
+    img{
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tbody>
+      <tr>
+        <td rowspan="2">
+            <a><img src="travel.gif" alt=""></a>
+        </td>
+        <td><a>跟团游</a></td>
+        <td><a>游轮游</a></td>
+      </tr>
+      <tr>
+        <td><a>自由行</a></td>
+        <td><a>酒店+景点</a></td>
+      </tr>
+      <tr>
+        <td><a>出境游</a></td>
+        <td><a>国内游</a></td>
+        <td><a>周边游</a></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
