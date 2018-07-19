@@ -60,10 +60,11 @@ div {
     line-height: 1.8rem;
     padding-top: .2rem;
     width: 96%;
-    background: url("../images/tuniu/search.svg") no-repeat 6px 0px;
+    background: url("../images/tuniu/search.svg") no-repeat 6px 0px white;
 }
 
 .ad {
+    margin-top: 3.8rem;
     width: 100%;
 }
 
