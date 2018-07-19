@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+div {
+    float: left;
+    margin: .1%;
+}
+
+.top {
+    position: fixed;
+    height: 3.8rem;
+    width: 100%;
+    z-index: 9999;
+}
+
+.top .left {
+    width: 10rem;
+    float: left;
+    padding-top: .5rem;
+}
+
+.top .right {
+    width: 10rem;
+    float: left;
+    margin-left: 2rem;
+    padding-top: .5rem;
+}
+
+.top .center {
+    float: left;
+}
+
+.top img {
+    margin-left: .5rem;
+    margin-top: .1rem;
+    float: left;
+    width: 24%;
+}
+
+.top select {
+    border: none;
+    outline: none; /*清除聚焦时效果 */
+    width: 4.8rem;
+    margin-top: 1.0rem;
+    float: left;
+    font-family: "Microsoft YaHei UI";
+    font-size: 1.0rem;
+    background-color: aqua;
+}
+
+.top input[type='text'] {
+    margin-top: .8rem;
+    padding-left: 2.6rem;
+    line-height: 1.8rem;
+    padding-top: .2rem;
+    width: 96%;
+    background: url("../images/tuniu/search.svg") no-repeat 6px 0px;
+}
+
+.ad {
+    width: 100%;
+}
+
+.ad img {
+    width: 100%;
+}
+
+.width_10 {
+    width: 9.9%;
+}
+
+.width_20 {
+    width: 19.6%;
+}
+
+.width_33 {
+    width: 33.1%;
+}
+
+.width_50 {
+    width: 49.7%;
+}
+
+.width_67 {
+    width: 66.5%;
+}
+
+.width_80 {
+    width: 79%;
+}
+
+.width_100 {
+    width: 100%;
+}
+
+.color_green {
+    background-color: aquamarine;
+}
+
+.color_blue {
+    background-color: lightskyblue;
+}
+
+.color_red {
+    background-color: orangered;
+}
+
+.color_orange {
+    background-color: darkorange;
+}
+
+.text {
+    position: relative;
+    font-size: 7rem;
+    font-family: Arial;
+    color: white;
+    font-style: normal;
+    text-align: center;
+    padding-top: 12%;
+}
+
+div#travel img {
+    width: 100%;
+    margin-left: .1rem;
+    margin-top: .2rem;
+}
+
+div#plane img {
+    width: 100%;
+    margin-left: .1rem;
+    margin-top: .2rem;
+}
+
+div#hotel img {
+    width: 100%;
+}
+
+.blank_space {
+    background-color: white;
+    line-height: .3rem;
+    width: 100%;
+}
+
+.tool img {
+    width: 20%;
+    position: relative;
+    left: 40%;
+}
+
+.tool p {
+    position: relative;
+    font-size: 1rem;
+    font-family: Arial;
+    color: black;
+    font-style: normal;
+    text-align: center;
+}

@@ -1,0 +1,222 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+header{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 50px;
+    z-index:3;
+}
+section{
+    background: #fff;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.top{
+    display: flex;
+    background: #2dbb55;
+    height: 50px;
+    padding-right: 100px;
+    color:white;
+}
+.top .top-left{
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.top .top-left .logo{
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding: 10px 5px 10px 10px;
+    background: url(../img/logo-3x.png) no-repeat 10px 10px;
+    background-clip: content-box;
+    background-size: 30px 30px;
+}
+.top .top-left .city{
+    float: left;
+    position: relative;
+    padding: 10px 22px 10px 5px;
+    height: 30px;
+    line-height: 30px;
+    max-width: 64px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+}
+.top .top-middle{
+    flex: 1;
+    overflow: hidden;
+    height: 50px;
+}
+.top .top-middle .search{
+    position: relative;
+    margin: 10px 0;
+    padding-left: 10px;
+    line-height: 30px;
+    border-radius: 2px;
+    background: #fff;
+    color: #bbb;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.top .top-middle .search .icon-search{
+    display: inline-block;
+    margin-right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/search.png);
+    background-size: 20px 20px;
+    vertical-align: -5px;
+}
+.top .top-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
+}
+.top .top-right .top-account{
+    float: left;
+    padding: 15px 0 11px;
+    width: 40px;
+    height: 20px;
+    line-height: 20px
+}
+.top .top-right .top-account .icon-account{
+    display: inline-block;
+    margin-left: 14px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/account.png);
+    background-size: 20px 20px;
+}
+.top .top-right .top-nav{
+    float: left;
+    position: relative;
+    font-size: 16px;
+    padding: 17px 22px 13px 5px;
+    height: 20px;
+    line-height: 20px;
+}
+.pic{
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+}
+.pic img{
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    min-width: 300px;
+}
+.inner{
+    position: relative;
+    margin: 3px;
+    font-size: 15px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.inner table{
+    position: relative;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 2px;
+    overflow: hidden;
+}
+.inner td{
+    /*position: relative;
+    padding: 0;
+    width: 33%;
+    text-align: center;
+    border: solid 1px #fff;
+    overflow: hidden;*/
+    position: relative;
+    width: 33.33%;
+    padding-bottom: 12.98%;
+    border: solid 1px #fff;
+    overflow: hidden;
+}
+.inner td .list-img{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  
+}
+.inner td  div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    transform: translateY(-50%);
+    background-color: #00c37d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner .list-2 td div{
+    background-color: #47adff
+}
+.inner .list-3 td div{
+    background-color: #fe7443
+}.inner .list-4 td div{
+    background-color: #f88f0a
+}
+.quick .quick-list{
+    background: #fff;
+}
+.quick .quick-list li{
+    float: left;
+    width: 20%;
+    padding: 8px 0 12px;
+}
+.quick .quick-list li div{
+    position: relative;
+    padding: 0 0 21px 0;
+    height: 22px;
+    line-height: 16px;
+    color: #222;
+    text-align: center;
+
+}
+.quick .quick-list li div .quick-img{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+}
+.quick .quick-list li div h3{
+    font-weight: 500;
+    font-size: 12px;
+    width: 100%;
+    line-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
