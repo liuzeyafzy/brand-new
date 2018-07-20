@@ -1,0 +1,22 @@
+body{
+    margin:0;
+    padding: 0;
+}
+a{
+    font-size: 20px;
+    margin: 1px;
+    color: white;
+}
+ul{
+    width:100%;
+    list-style: none;
+}
+li{
+    width:30%;
+    background-color: blue;
+    float: left;
+    margin: 1px;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
