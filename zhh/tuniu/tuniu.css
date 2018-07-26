@@ -172,6 +172,7 @@ li {
 }
 .li-a{
     line-height: 12px;
+    display:inline-block;
 }
 h3{
     margin: 0;
