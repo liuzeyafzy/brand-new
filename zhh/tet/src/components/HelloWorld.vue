@@ -80,6 +80,15 @@
         </a>
       </li>
     </ul>
+  <div id="app-7">
+    <ol>
+      <todo-item
+        v-for="item in gList"
+        :todo="item"
+        :key="item.id">
+      </todo-item>
+    </ol>
+  </div>
   </div>
 </template>
 
@@ -92,6 +101,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

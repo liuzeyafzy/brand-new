@@ -1,8 +1,8 @@
 {
-  "name": "test",
+  "name": "tet",
   "version": "1.0.0",
-  "description": "ftest",
-  "author": "brett",
+  "description": "a",
+  "author": "BrettZHH <brett_zhh@163.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -14,7 +14,6 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "tet": "^1.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -71,7 +70,7 @@
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
-    "webpack": "^3.12.0",
+    "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
