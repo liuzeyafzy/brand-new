@@ -6,14 +6,20 @@
   </head>
   <body>
     <script>
-	  const socket = new WebSocket("ws://192.168.15.180:3000");
+	  const socket = new WebSocket("ws://192.168.0.151:3000");
 
 	  socket.addEventListener('open', () => {
 	    socket.send('Hello qianping!');
+		socket.send(`{
+	      "uuid": "1",
+	      "userid": "3010001",
+	      "funcno": "100000",
+	      "userpassword": "1"
+        }`)
 	  });
 
 	  socket.addEventListener('message', event => {
-	    console.log('Message from server ', event.data)
+	    console.log('Message from server ', Object.prototype.toString.call(event.data), event.data)
 	  })
 	</script>
   </body>
