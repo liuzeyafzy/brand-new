@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="/Users/libiao/Desktop/workspace/brand-new/libiao/libiao/node_modules/vue/dist/vue.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>test</title>
+</head>
+
+<body>
+    <div id="app-2">
+        <span v-bind:title="message">
+          鼠标悬停几秒钟查看当前页面加载时间！！
+        </span>
+      </div>
+
+      <div id="app-3">
+          <p>Using mustaches: {{ message }}</p>
+          <p>Using v-html directive: <span v-html="message"></span></p>
+      </div>
+
+  <div id="todo-list-example">
+    <form v-on:submit.prevent="addNewTodo">
+      <label for="new-todo">Add a todo</label>
+      <input v-model="newTodoText" id="new-todo" placeholder="E.g. Feed the cat">
+      <button>Add</button>
+    </form>
+    <ul>
+      <li is="todo-item" v-for="(todo, index) in todos" v-bind:key="todo.id" v-bind:title="todo.title" v-on:remove="todos.splice(index, 1)"></li>
+    </ul>
+  </div>
+
+  <div id="example-1">
+  <button v-on:click="counter += 1">Add 1</button>
+  <p>The button above has been clicked {{ counter }} times.</p>
+</div>
+
+<div id="example-3">
+    <button v-on:click="say('hi!')">Say hi</button>
+    <button v-on:click.middle="onclick('what?')">Say what</button>
+    <button v-on:click.right="warn('Unpredicted Error diaplay!', $event)">
+        Submit
+      </button>
+  </div>
+
+  <div id="example-4">
+      <input type="radio" id="one" value="One" v-model="picked">
+      <label for="one">One</label>
+      <br>
+      <input type="radio" id="two" value="Two" v-model="picked">
+      <label for="two">Two</label>
+      <br>
+      <span>Picked: {{ picked }}</span>
+    </div>
+
+    <div id="example-5">
+        <select v-model="selected">
+          <option disabled value="">请选择</option><!--如果 v-model 表达式的初始值未能匹配任何选项，<select> 元素将被渲染为“未选中”状态。h-->
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+      </div>
+
+   <!-- <div id="app1" v-bind:class="{ active: isActive }"></div>
+   <div class="static"
+     v-bind:class="{ active: isActive, 'text-danger': hasError }">
+</div> -->
+
+  <script>
+    var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    message: '页面加载于 ' + new Date().toLocaleString()
+  }
+})
+
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    message: '<span style="color:red">this is red color</span>'
+  }
+})
+
+    Vue.component('todo-item', {
+      template: '\
+    <li>\
+      {{ title }}\
+      <button v-on:click="$emit(\'remove\')">Remove</button>\
+    </li>\
+  ',
+      props: ['title']
+    })
+
+    new Vue({
+      el: '#todo-list-example',
+      data: {
+        newTodoText: '',
+        todos: [{
+            id: 1,
+            title: 'Do the dishes',
+          },
+          {
+            id: 2,
+            title: 'Take out the trash',
+          },
+          {
+            id: 3,
+            title: 'Mow the lawn'
+          }
+        ],
+        nextTodoId: 4
+      },
+      methods: {
+        addNewTodo: function () {
+          this.todos.push({
+            id: this.nextTodoId++,
+            title: this.newTodoText
+          })
+          this.newTodoText = ''
+        }
+      }
+    })
+
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    counter: 0
+  }
+})
+
+new Vue({
+  el: '#example-3',
+  methods: {
+    say: function (message) {
+      alert(message)
+    },
+    onclick:function(message){alert(message)},
+    warn: function (message, event) {
+    // 现在我们可以访问原生事件对象
+    if (event) event.preventDefault()
+    alert(message)
+  }
+}
+})
+
+new Vue({
+  el: '#example-4',
+  data: {
+    picked: ''
+  }
+})
+
+new Vue({
+  el: '#example-5',
+  data: {
+    selected: ''
+  }
+})
+
+// new vm=new Vue({
+//   el: '#app1',
+//   data: {
+//     isActive: true,
+//   hasError: false
+//   }
+// })
+
+
+  </script>
+</body>
+
+</html>
