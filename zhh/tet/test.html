@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <script src="node_modules/vue/dist/vue.js"></script>
+  <script type="text/javascript" src="config/test.js"></script>
+  <title>tet</title>
+</head>
+
+<body>
+  <div id="firstmsg">{{ msg }}</div>
+  <div id="combtitle">
+    <span :title="date1 + ' ' + date2">这是测试title组合</span>
+  </div>
+  <div id="functitle">
+    <span :title="getDate()">这是测试title函数作用</span>
+  </div>
+  <div id="objtitle">
+    <span :title="obj">这是测试对象作为title的作用</span>
+  </div>
+  <div id="arrtitle">
+    <span :title="arr">这是测试数组作为title的作用</span>
+  </div>
+  <div id="objclass">
+    <span :class="obj">这是测试对象作为class的作用</span>
+  </div>
+  <div id="objstyle">
+    <span :style="obj">这是测试对象作为style的作用</span>
+  </div>
+  <div id="secondmsg"><br><br>{{ msg }}</div>
+  <div id="stop">
+    <div style="width: 1000px;height: 40px;" @click="show1">
+      <button @click.stop="show1">stop</button>
+      <button @click="show1">nostop</button>
+      <a href="http://www.baidu.com/">不设置prevent</a>
+      <a href="http://www.baidu.com/" @click.prevent>prevent阻止</a>
+      <a href="http://www.baidu.com/" @click.prevent="show1">prevent无法制止设定函数</a>
+    </div>
+    <div style="width: 100px;height: 40px;" @click.capture="show1">
+      <button @click="show2">A</button>
+    </div>
+  </div>
+  <div id="reverse">
+    <p>{{ msg}}</p>
+    <button @click="reverseWords">逆转文字</button>
+  </div>
+  <div id="pinput">
+    <p>{{ msg}}</p>
+    <input v-model="msg">
+  </div>
+  <div id="glist">
+    <ol>
+      <todo-item
+        v-for="item in gList"
+        :todo="item"
+        :key="item.id">
+      </todo-item>
+    </ol>
+  </div>
+</body>
+
+</html>
