@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>vue show</title>
+    <link rel="stylesheet" type="text/css" href="../tuniu.css">
+  </head>
+  <body>
+    <div>
+      <input type="text" placeholder="请输入圆盘数量" id="Number">
+      <button class="myButton" onclick="setLocation(document.getElementById('Number').value, 'A', 'B', 'C')">汉诺塔递归方法按钮</button>
+      <button class="myButton" onclick="consoleFibonacci()">斐波那契数列递归方法按钮</button>
+      <p id="recycleHanoi"></p>
+      <p id="recycleFibonacci"></p>
+    </div>
+  <script>
+    function setLocation (max, a, b, c) {
+      var i = Number(max)
+      if (i === 1) {
+        // document.getElementById('recycleHanoi').innerHTML = ('Move ' + i + ' form ' + a + ' to ' + c)
+        console.log('Move ' + i + ' form ' + a + ' to ' + c)
+      } else {
+        setLocation(i-1, a, c, b)
+        // document.getElementById('recycleHanoi').innerHTML = document.getElementById('recycleHanoi').innerHTML + ('Move ' + i + ' form ' + a + ' to ' + c)
+        console.log('Move ' + i + ' form ' + a + ' to ' + c)
+        setLocation(i-1, b, a, c)
+      }
+    } 
+    function getFibonacci (max) {
+      var i = Number(max)
+      if (i === 1) {
+        return 1
+      } else if (i === 2) {
+        getFibonacci (max-1)
+        return 1
+      } else {
+        let j = getFibonacci(i-1) + getFibonacci(i-2)
+        return j
+      }
+    }
+    function consoleFibonacci () {
+      var i = Number(document.getElementById('Number').value)
+      var a = []
+      for (i; i > 0; i--) {
+        a[i-1] = getFibonacci(i)
+      }
+      document.getElementById('recycleFibonacci').innerHTML = '展示'+ Number(document.getElementById('Number').value) + '位的斐波那契数列:' + a
+    }
+    function getType (obj) {
+      var tmpObj = Object.prototype.toString;
+      var tmpType = {
+        '[object Boolean]': 'boolean', 
+        '[object Number]': 'number', 
+        '[object String]': 'string', 
+        '[object Function]': 'function', 
+        '[object Array]': 'array', 
+        '[object Date]': 'date', 
+        '[object RegExp]': 'regExp', 
+        '[object Undefined]': 'undefined',
+        '[object Null]': 'null', 
+        '[object Object]': 'object'
+      }
+      if (obj instanceof Element) {
+        return 'element'
+      }
+      return tmpType[toString.call(obj)]
+    }
+    function deepClone (obj) {
+      var type = getType(obj)
+      var tmpObj
+      if (type === 'array') {
+        tmpObj = []
+        for (var i = 0; i < obj.length; i++) {
+          tmpObj.push(deepClone(obj[i]))
+        }
+      } else if (type === 'object') {
+        tmpObj = {}
+        for (var j in obj) {
+          tmpObj[j] = deepClone(obj[j])
+        }
+      } else {
+        return obj
+      }
+      return tmpObj
+    }
+  </script>
+</body>
+</html>
