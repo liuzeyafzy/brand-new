@@ -1,11 +1,4 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-  <title>深度拷贝</title>
-</head>
-<body>
-<script type="text/javascript">
+
 // 深度拷贝递归
 function deepClone(obj){
   let objClone = Array.isArray(obj)?[]:{};
@@ -51,6 +44,4 @@ console.log(a,b)
 递归算法实际上是一种分而治之的方法，它把复杂问题分解为简单问题来求解。对于某些复杂问题(例如hanio塔问题)，
 递归算法是一种自然且合乎逻辑的解决问题的方式，但是递归算法的执行效率通常比较差。
 */
-</script>
-</body>
-</html>
+
