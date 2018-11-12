@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>非递归汉诺塔</title>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        #bd{position:fixed;top:50%;left:50%;width:800px;height:200px;margin:-100px 0 0 -400px;}
+        .pillar{position:relative;margin-left:200px;float:left;width:4px;height:200px;background:#000;}
+        .pillar:before{position:absolute;bottom:-20px;left:-2px;}
+        .pillar p{position:absolute;bottom:0;left:0;}
+        #A:before{content:'A';}
+        #B:before{content:'B';}
+        #C:before{content:'C';}
+        .disk{display:block;background:#f60;margin-top:1px;height:10px;}
+    </style>
+</head>
+<body>
+    <p> 
+    汉诺塔非递归算法：</p>
+    <p>(1)、若问题规模n为偶数，按顺时针方向依次摆放A, B, C为环，若n为奇数，则为A, C, B；  </p>
+    <p>(2)、将盘子由小到大逐个编号并放置在s上，即最小的盘子编号为1，放在最上面；</p>
+    <p>(3)、按顺时针方向把编号为1的盘子从当前的位置移动到下一位置；</p>
+    <p>(4)、把另外两个位置（即除去1号盘子所在的位置）中非空的那个上的一个圆盘移到空的位置上，如果另外两个位置都非空，则移动编号较小的那一个；</p>
+    <p>(5)、重复进行(3)和(4)，直到移动的次数等于2^n-1。</p>
+<div id="bd">
+    <div class="pillar" id='A'>
+        <p></p>
+    </div>
+    <div class="pillar" id='B'>
+        <p></p>
+    </div>
+    <div class="pillar" id='C'>
+        <p></p>
+    </div>
+</div>
+<script type="text/javascript">
+    window.onload=function(){
+        var $=function(s){return document.getElementById(s)};
+        var $T='getElementsByTagName';
+        var A=$('A'),
+            B=$('B'),
+            C=$('C');
+        //创建圆盘
+        var createDisk=function(pillar,n){
+            var box=pillar[$T]('p')[0];
+            var _html='';
+            var disk=function(i){
+                var s=i*20;
+                return '<span class="disk" style="width:'+ s +'px;margin-left:'+ -(s/2-2) +'px;"></span>';
+            };
+            for(var i=1;i<=n;i++){
+                _html+=disk(i);
+            }
+            box.innerHTML=_html;
+        };
+        //移动圆盘
+        var move=function(cur,to){
+            var target=to[$T]('p')[0];
+            var disk=cur[$T]('span')[0];
+            target.insertBefore(disk,target.firstChild);//将圆盘移动到顶部
+        };
+        //汉诺塔递归算法
+        // var hanoi=function(n,A,B,C){
+        //     var arry=[];
+        //     var _hanoi=function(n,A,B,C){
+        //         if(n==1){
+        //             arry.push(A,C);
+        //         }
+        //         else{
+        //             _hanoi(n-1,A,C,B);
+        //             arry.push(A,C);
+        //             _hanoi(n-1,B,A,C);
+        //         }
+        //     };
+        //     _hanoi(n,A,B,C);
+        //     return arry;
+        // };
+        var hanoi=function(n, A, B, C) {  
+            //定义位置
+            var arry = []; // 用于存储移动一块圆盘
+            var loop=new Array(3);  
+            loop[0]=new Array(n);  
+            loop[1]=new Array(n);  
+            loop[2]=new Array(n);  
+            //定义位置描述字符串数组(n为偶数的情况)  
+            var loca=new Array(A, B, C);  
+            if (n%2!=0) //n为奇数的情况  
+            {  
+                loca[1]=C;  
+                loca[2]=B;  
+            }  
+            //初始化源位置上的盘子  
+            for(var i=0; i<n; i++)  
+                loop[0][i]=n-i;  
+            //记录各个位置上盘子的数量  
+            var loopLen=new Array(n, 0, 0);  
+            var count=Math.pow(2, n)-1; //移动次数，即循环退出条件  
+            var firstPlate=0; //1号盘子的位置  
+            do  
+            {  
+                //将1号盘子顺时针移动到后1个位置  
+                arry.push(loca[firstPlate], loca[(firstPlate+1)%3]); //显示移动过程  
+                loop[(firstPlate+1)%3][loopLen[(firstPlate+1)%3]]=1; //移动  
+                loopLen[firstPlate]--; //修改1号盘子旧位置上盘子的数量  
+                firstPlate=(firstPlate+1)%3; //修改1号盘子的位置  
+                loopLen[firstPlate]++; //修改1号盘子新位置上盘子的数量  
+                count--; //记录移动次数  
+                //移动另外的两个位置上的盘子  
+                if(count!=0) //避免最后一次移动后仍然移动而导致错误  
+                {  
+                    //确定另外两个位置如何移动  
+                    if (loopLen[(firstPlate+1)%3]==0 || loopLen[(firstPlate+2)%3]!=0 &&  
+                        loop[(firstPlate+2)%3][loopLen[(firstPlate+2)%3]-1] < loop[(firstPlate+1)%3][loopLen[(firstPlate+1)%3]-1] )  
+                    { //1号盘子的后第1个位置为空，或者无空位置且1号盘子后第2个位置编号较小，此时将1号盘子后第2个位置的盘子移动到1号盘子后第1个位置上  
+                        arry.push(loca[(firstPlate+2)%3], loca[(firstPlate+1)%3]); //显示移动过程  
+                        loop[(firstPlate+1)%3][loopLen[(firstPlate+1)%3]]=loop[(firstPlate+2)%3][loopLen[(firstPlate+2)%3]-1]; //移动  
+                        loopLen[(firstPlate+2)%3]--; //修改该盘子旧位置上盘子的数量  
+                        loopLen[(firstPlate+1)%3]++; //修改该盘子新位置上盘子的数量  
+                    }  
+                    else  
+                    { //1号盘子的后第2个位置为空，或者无空位置且1号盘子后第1个位置编号较小，此时将1号盘子后第1个位置的盘子移动到1号盘子后第2个位置上  
+                        arry.push(loca[(firstPlate+1)%3], loca[(firstPlate+2)%3]); //显示移动过程  
+                        loop[(firstPlate+2)%3][loopLen[(firstPlate+2)%3]]=loop[(firstPlate+1)%3][loopLen[(firstPlate+1)%3]-1]; //移动  
+                        loopLen[(firstPlate+1)%3]--; //修改该盘子旧位置上盘子的数量  
+                        loopLen[(firstPlate+2)%3]++; //修改该盘子新位置上盘子的数量  
+                    }  
+                    count--; //记录移动次数  
+                }  
+            } while(count!=0)
+            return arry;
+        };
+        //延时
+        var delay=function(callback,time){
+            return setInterval(callback,time);
+        };
+        var hanoiStart=function(n){
+            console.log(n)
+            n = Number(n)
+            createDisk(A,n);
+            var arry=hanoi(n,A,B,C);
+            var i=0,len=arry.length;
+            var T=delay(function(){
+                move(arry[i],arry[i+1]);
+                i=i+2;
+                if(i>=len){
+                    clearInterval(T);
+                    alert('完成!');
+                }
+            },1000);
+        };
+        //开始汉诺塔(圆盘个数,延时--ms)，数字越大，花的时间越久
+        hanoiStart(3);
+    };
+</script>
+</body>
+</html>
