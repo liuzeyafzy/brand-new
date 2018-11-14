@@ -88,3 +88,51 @@ function move(n, from, to) {
   console.log(`第${count}次移动，${n}号盘子从${from}到${to}`)
 }
 `
+
+3、使用递归方法生成“斐波拉契”数列
+斐波拉契数列，第一项和第二项为1，其余每一项都是前面两项之和。
+
+`
+var fbi = function(n){
+  if (n == 1 || n == 2) {
+    return 1;
+  } else {
+    return fbi(n-1) + fbi(n-2)
+  }
+}
+`
+
+4、使用递归方法对js的某个变量进行深度拷贝。
+这个主要是要判断某个变量是什么数据类型，如果是Object，则需要对其子项进行递归遍历；如果是数组，则需要对其每个字元素进行递归遍历。
+
+5、使用非递归方法解决“汉诺塔”问题
+有个格雷码的思路比较有意思，可以再细细分析一下。
+
+6、使用非递归方法生成“斐波拉契”数列
+`
+function fib(n){
+    if(n < 1){
+        throw new Error('invalid arguments');
+    }
+    if(n == 1 || n == 2){
+        return 1;
+    }
+    var a = 1,
+        b = 1,
+        res = 0;
+    for(var i=3;i<=n;i++){
+        res = a + b;
+        a = b;
+        b = res;
+    }
+    return res;
+}
+`
+
+7、谈谈还有没有别的方法对js的某个变量进行深度拷贝。
+a: Json.parse(Json.stringify(obj))
+b: 网上又个deepCope函数，自己百度
+c: jQuery的$.extend()方法，注意第一个入参要为true。
+
+8、辨析，递归方法和非递归方法的区别
+TODO`
