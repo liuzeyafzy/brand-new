@@ -3,29 +3,134 @@
   <head>
     <meta charset="UTF-8">
     <title>vue show</title>
-    <link rel="stylesheet" type="text/css" href="../tuniu.css">
+    <link rel="stylesheet" type="text/css" href="../zhh/test.css">
   </head>
   <body>
-    <div>
+    <div style="margin: 40px">
       <input type="text" placeholder="请输入圆盘数量" id="Number">
       <button class="myButton" onclick="setLocation(document.getElementById('Number').value, 'A', 'B', 'C')">汉诺塔递归方法按钮</button>
+      <button class="myButton" onclick="moveAction()">汉诺塔非递归方法按钮</button>
       <button class="myButton" onclick="consoleFibonacci()">斐波那契数列递归方法按钮</button>
+      <button class="myButton" onclick="anotherFibonacci()">斐波那契数列非递归方法按钮</button>
       <p id="recycleHanoi"></p>
       <p id="recycleFibonacci"></p>
     </div>
   <script>
+    // 汉诺塔递归
     function setLocation (max, a, b, c) {
       var i = Number(max)
       if (i === 1) {
-        // document.getElementById('recycleHanoi').innerHTML = ('Move ' + i + ' form ' + a + ' to ' + c)
-        console.log('Move ' + i + ' form ' + a + ' to ' + c)
+        // document.getElementById('recycleHanoi').innerHTML = ('Move ' + i + ' from ' + a + ' to ' + c)
+        console.log('Move ' + i + ' from ' + a + ' to ' + c)
       } else {
         setLocation(i-1, a, c, b)
-        // document.getElementById('recycleHanoi').innerHTML = document.getElementById('recycleHanoi').innerHTML + ('Move ' + i + ' form ' + a + ' to ' + c)
-        console.log('Move ' + i + ' form ' + a + ' to ' + c)
+        // document.getElementById('recycleHanoi').innerHTML = document.getElementById('recycleHanoi').innerHTML + ('Move ' + i + ' from ' + a + ' to ' + c)
+        console.log('Move ' + i + ' from ' + a + ' to ' + c)
         setLocation(i-1, b, a, c)
       }
-    } 
+    }
+    // 汉诺塔非递归
+    // 得到数组顶部数据
+    function getTop(arr) {
+      let a
+      for (var i in arr){
+        a = arr[i]
+      }
+      return a
+    }
+    // 获取最大操作次数
+    function getTimes (n) {
+      var b = 1
+      while (n > 0) {
+        b = b*2
+        n--
+      }
+      return b-1
+    }
+    function moveAction () {
+      var max = Number(document.getElementById('Number').value)
+      var maxTimes = getTimes(max)
+      var a = []
+      var b = []
+      var c = []
+      var flag = 'a'
+      // 初始化A盘
+      for (var i = 0; i < max; i++) {
+        a [i] = max - i
+      }
+      // 奇数会将盘子移动至B杆，偶数会将盘子移动至C感
+      console.log('奇数移到B杆，偶数移到C杆')
+      while (maxTimes > 0) {
+        // 一次会执行两步操作（移动最小盘和较小盘）
+        maxTimes = maxTimes - 2
+        if (flag === 'a') {
+          // 移动最小盘至下个杆上下同
+          console.log('Move ' + getTop(a) + ' from a to b')
+          b.push(a.pop())
+          flag = 'b'
+          // 对比剩余两盘，将较小盘移动至无盘杆或较大盘杆，下同
+          if (getTop(a) === undefined && getTop(c) === undefined) {
+            
+          } else if (getTop(a) === undefined) {
+            console.log('Move ' + getTop(c) + ' from c to a')
+            a.push(c.pop())
+          } else if (getTop(c) === undefined) {
+            console.log('Move ' + getTop(a) + ' from a to c')
+            c.push(a.pop())
+          } else if (getTop(a) > getTop(c)) {
+            console.log('Move ' + getTop(c) + ' from c to a')
+            a.push(c.pop())
+          } else {
+            console.log('Move ' + getTop(a) + ' from a to c')
+            c.push(a.pop())
+          }
+        } else if (flag === 'b') {
+          console.log('Move ' + getTop(b) + ' from b to c')
+          c.push(b.pop())
+          flag = 'c'
+          if (getTop(a) === undefined && getTop(b) === undefined) {
+            
+          } else if (getTop(a) === undefined) {
+            console.log('Move ' + getTop(b) + ' from b to a')
+            a.push(b.pop())
+          } else if (getTop(b) === undefined) {
+            console.log('Move ' + getTop(a) + ' from a to b')
+            b.push(a.pop())
+          } else if (getTop(a) > getTop(b)) {
+            console.log('Move ' + getTop(b) + ' from b to a')
+            a.push(b.pop())
+          } else {
+            console.log('Move ' + getTop(a) + ' from a to b')
+            b.push(a.pop())
+          }
+        } else if (flag === 'c') {
+          console.log('Move ' + getTop(c) + ' from c to a')
+          a.push(c.pop())
+          flag = 'a'
+          if (getTop(b) === undefined && getTop(c) === undefined) {
+            
+          } else if (getTop(b) === undefined) {
+            console.log('Move ' + getTop(c) + ' from c to b')
+            b.push(c.pop())
+          } else if (getTop(c) === undefined) {
+            console.log('Move ' + getTop(b) + ' from b to c')
+            c.push(b.pop())
+          } else if (getTop(b) > getTop(c)) {
+            console.log('Move ' + getTop(c) + ' from c to b')
+            b.push(c.pop())
+          } else {
+            console.log('Move ' + getTop(b) + ' from b to c')
+            c.push(b.pop())
+          }
+        }
+      }
+      if (document.getElementById('Number').value % 2 === 1) {
+        console.log(b)
+      } else {
+        console.log(c)
+      }
+    }
+    // 斐波那契数列递归
     function getFibonacci (max) {
       var i = Number(max)
       if (i === 1) {
@@ -44,8 +149,22 @@
       for (i; i > 0; i--) {
         a[i-1] = getFibonacci(i)
       }
-      document.getElementById('recycleFibonacci').innerHTML = '展示'+ Number(document.getElementById('Number').value) + '位的斐波那契数列:' + a
+      document.getElementById('recycleFibonacci').innerHTML = '递归方法展示'+ Number(document.getElementById('Number').value) + '位的斐波那契数列:' + a
     }
+    // 斐波那契数列非递归
+    function anotherFibonacci () {
+      var max = Number(document.getElementById('Number').value)
+      var arr = []
+      for (var a = 1; a < max + 1; a ++) {
+        if (a === 1 || a === 2) {
+          arr[a-1] = 1
+        } else {
+          arr[a-1] = arr[a-3] + arr[a-2]
+        }
+      }
+      document.getElementById('recycleFibonacci').innerHTML = '非递归方法展示'+ Number(document.getElementById('Number').value) + '位的斐波那契数列:' + arr
+    }
+    // 深拷贝递归
     function getType (obj) {
       var tmpObj = Object.prototype.toString;
       var tmpType = {
@@ -82,6 +201,46 @@
         return obj
       }
       return tmpObj
+    }
+    // 非递归深拷贝
+    function anotherDeepClone(data) {
+      var type = getType(data)
+      if (type === 'array') {
+      var obj = []
+      }
+      if (type === 'object') {
+      var obj = {}
+      }
+      if (type === 'array' || type === 'object') {
+        var originQueue = [data]
+        var copyQueue = [obj]
+        var visitQueue = []
+        var copyVisitQueue = []
+        while (originQueue.length > 0) {
+          var _data = originQueue.shift()
+          var _obj = copyQueue.shift()
+          visitQueue.push(_data)
+          copyVisitQueue.push(_obj)
+          for(var key in _data){
+            var _value = _data[key]
+            if(getType(_value) !== 'object' || getType(_value) !== 'array'){
+              _obj[key] = _value
+            } else {
+              var index = visitQueue.indexOf(_value)
+              if (index >= 0) {
+                _obj[key] = copyVisitQueue[index]
+              } else {
+                originQueue.push(_value)
+                _obj[key] = {}
+                copyQueue.push(_obj[key])
+              }
+            }
+          }
+        }
+      } else {
+        obj = data
+      }
+      return obj
     }
   </script>
 </body>
