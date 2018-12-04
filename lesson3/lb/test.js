@@ -1,8 +1,9 @@
 // 重写console.log函数
-var i = 1
+
 console.log = (function(oriLogFunc) {
+    var i = 1
     return function (str) {
-        orgLogFunc.call(console,'第' + i++ + '次:' + str)
+        oriLogFunc.call(console,'第' + i++ + '次:' + str)
     }
 })(console.log)
 
@@ -20,3 +21,5 @@ function objectFactory () {
     return typeof ret === 'object' ? ret : obj
 }
 var Lee = objectFactory(person, 'Kevin', '18')
+console.log(Lee.name)
+console.log(Lee.habit)
