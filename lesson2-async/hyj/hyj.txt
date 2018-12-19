@@ -68,4 +68,44 @@
   Promise.all([p1,p2]).then(function(data){
     ajaxC
   })
-  不用promise,
+  不用promise,用回调函数
+  function a(callbackFunction){
+    ajaxA
+    return callbackFunction(value);
+  }
+  function d(value){
+    if(!value){
+      ajaxD
+    }
+    return val;
+  }
+  function b(callbackFunction){
+    ajaxB
+    return callbackFunction(value);
+  }
+  function e(value){
+    if(!value){
+      ajaxE
+    }
+    return val;
+  }
+  function(){
+    var result = a(d) && b(c)
+    if(result) {
+      ajaxC
+    }
+  }
+
+7、async，一个异步执行的功能，而 await 则是配合 async 使用的另一个关键字，意思就是等待
+  首先，从别人那得来的 async/await 规则：
+  async 表示这是一个 async 函数，而 await 只能在这个函数里面使用。
+  await 表示在这里等待 await 后面的操作执行完毕，再执行下一句代码。
+  await 后面紧跟着的最好是一个耗时的操作或者是一个异步操作(当然非耗时的操作也可以的，但是就失去意义了)。
+
+  let howLongToSleep = async function () {
+    // 在这里使用起来就像同步代码那样直观
+    console.log('start');
+    await sleep(3000);  //sleep 为一个执行需要耗费 3s 的函数
+    console.timeEnd('end');
+ };
+

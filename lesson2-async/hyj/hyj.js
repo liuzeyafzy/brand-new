@@ -25,3 +25,5 @@ var p2 = new Promise(function (resolve, reject) {
 Promise.all([p1,p2]).then(function(data){
   ajaxC
 })
+
+IF(COUNTIF(A6,"发热")=1,IF(OR(COUNTIF(A6,"无发热")=1,COUNTIF(A6,"未诉发热")=1),"0","1"),"3")
