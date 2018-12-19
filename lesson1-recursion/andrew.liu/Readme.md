@@ -46,7 +46,7 @@
 > 挪动两个盘子从from到to
 > 挪动第三个盘子从from到helper
 > 挪动两个盘子从to到helper
-> 挪动第四个盘子从from到to
+> 挪动第四个盘子从from到to //
 > 挪动两个盘子从helper到from
 > 挪动第三个盘子从helper到to
 > 挪动两个盘子从from到to

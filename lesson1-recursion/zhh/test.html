@@ -182,7 +182,7 @@
       if (obj instanceof Element) {
         return 'element'
       }
-      return tmpType[toString.call(obj)]
+      return tmpType[tmpObj.call(obj)]
     }
     function deepClone (obj) {
       var type = getType(obj)
