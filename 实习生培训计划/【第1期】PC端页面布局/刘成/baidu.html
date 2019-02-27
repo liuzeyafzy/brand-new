@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+         .all {
+             width: 100%;
+             height: 800px;
+             min-width: 700px;
+         }
+
+         .head {
+             width: 100%;
+             height: 30px;
+             border-bottom: 1px solid #cccccc;
+             line-height: 30px;
+             box-sizing: border-box;
+             position: relative;
+         }
+        .left {
+            width: 210px;
+            height: 30px;
+        }
+        .left img {
+            vertical-align: middle;
+        }
+        .left a{
+            vertical-align: middle;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .right {
+            width: 460px;
+            height: 30px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 12px;
+        }
+        .right ul {
+            list-style: none;
+        }
+        .right li {
+            float: left;
+            margin-right: 16px;
+        }
+        .right span {
+            margin-left: 30px;
+            width: 54px;
+            height: 30px;
+            float: left;
+            background-color: blue;
+            color: white;
+        }
+        .body {
+            height: 620px;
+            width: 100%;
+            text-align: center;
+        }
+        .body-logo {
+            margin-top: 100px;
+        }
+        .body-input {
+            height: 36px;
+            width: 605px;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+
+        }
+        .body-input-input {
+            width: 500px;
+            height: 30px;
+        }
+        .body-input-button {
+            height: 36px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+            margin-left: -6px;
+        }
+        .body-input-logo {
+            height: 30px;
+            width: 60px;
+            position: absolute;
+            top: 8px;
+            right: 100px;
+        }
+        .body-foot {
+            width: 890px;
+            height: 400px;
+            border: 1px solid #cccccc;
+            box-sizing: border-box;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .body-foot-top {
+            width: 100%;
+            height: 40px;
+            border-bottom: 1px solid #cccccc;
+            box-sizing: border-box;
+            text-align: left;
+            position: relative;
+        }
+        .img{
+            position: absolute;
+            right: 0;
+        }
+        .a1{
+            text-decoration: none;
+            display: inline-block;
+            height: 40px;
+            width: 120px;
+            line-height: 40px;
+            text-align: center;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .a1 div {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            background-image: url("img/hum.jpeg");
+            background-size: contain;
+            vertical-align: middle;
+        }
+        .a1:hover{
+            background-color: #cccccc;
+            color: white;
+        }
+        .a2:hover{
+            background-color: #cccccc;
+            color: white;
+        }
+
+        .a2 {
+            text-decoration: none;
+            display: inline-block;
+            height: 40px;
+            width: 80px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 14px;
+            margin-left: -5px;
+        }
+        .ul {
+            text-align: left;
+            list-style: none;
+            font-size: 14px;
+        }
+        .ul li {
+            display: inline-block;
+            height: 50px;
+            width: 800px;
+            border-bottom: 1px solid #cccccc;
+            margin-left: 30px;
+            line-height: 50px;
+        }
+        .foot {
+            width: 100%;
+            height: 150px;
+            font-size: 12px;
+        }
+        .foot-top {
+            width: 100%;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .foot-top a{
+            margin-right: 14px;
+        }
+        .foot-bottom {
+            width: 100%;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="head">
+            <div class="left">
+                <img src="img/weather.jpg" alt="">
+                <a href="">换肤</a>
+                <a href="">消息</a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="">新闻</a>
+                    </li>
+                    <li>
+                        <a href="">hao123</a>
+                    </li>
+                    <li>
+                        <a href="">地图</a>
+                    </li>
+                    <li>
+                        <a href="">视频</a>
+                    </li>
+                    <li>
+                        <a href="">贴吧</a>
+                    </li>
+                    <li>
+                        <a href="">学术</a>
+                    </li>
+                    <li>
+                        <a href="">孙大大大善</a>
+                    </li>
+                    <li>
+                        <a href="">设置</a>
+                    </li>
+                </ul>
+                <span>
+                      更多产品
+                </span>
+            </div>
+        </div>
+        <div class="body">
+            <div class="body-logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="body-input">
+                <input type="text" class="body-input-input">
+                <button class="body-input-button">百度一下</button>
+                <div class="body-input-logo">
+                    <a href="">
+                        <img src="img/mai.png" alt="">
+                    </a>
+                    <img src="img/1.png" alt="">
+                    <a href="">
+                        <img src="img/can.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="body-foot">
+                <div class="body-foot-top">
+                    <a href="" class="a1">
+                        <div >
+                        </div>
+                        我的关注
+                    </a>
+                    <a href="" class="a2">
+                        推荐
+                    </a>
+                    <a href="" class="a2">
+                        导航
+                    </a>
+                    <a href="" class="img">
+                        <img src="img/ci.png" alt="">
+                    </a>
+
+                </div>
+                <ul class="ul">
+                    <li>我的导航(0)</li>
+                    <li>+自定义</li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="foot-top">
+                <a href="">设为首页</a>
+                @2019 Baidu
+                <a href="">使用百度前必读</a>
+                <a href="">意见反馈</a>
+                京ICP证030173号
+            </div>
+            <div class="foot-bottom">
+                 京公安网备11000002000001号
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
