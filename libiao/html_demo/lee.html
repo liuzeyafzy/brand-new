@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="/Users/libiao/Desktop/workspace/brand-new/libiao/libiao/node_modules/vue/dist/vue.js"></script>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+  <script src="js/lee.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>just a test</title>
+</head>
+
+<body>
+  <div id="watch-example">
+    <p>
+      Ask a yes/no question:
+      <input v-model="question">
+    </p>
+    <p>{{ answer }}</p>
+  </div>
+
+<ul id="lee" class="demo">
+<li v-for="(value,key,index) in object">
+  {{index}}={{key}}:{{value}}
+</li>
+</ul>
+
+<ul id="lee1">
+  <template v-for="item in items">
+    <li>{{item.message}}</li>
+  </template>
+</ul>
+
+<div id="lee2">
+  <span v-for="n in 10">{{' '}}{{ n }}</span>
+</div>
+
+<div id="lee3">
+  <form v-on:submit.prevent="addnew">
+    <label for="newtodo">Add an new colloage</label>
+    <input v-model="newtext" id="newtodo" placeholder="E.g. Zhejiang University" style="width: 200px">
+    <button>add University</button>
+  </form>
+  <ul>
+    <li is="todoitem" v-for="(todo,index) in todos" v-bind:key="todo.id"
+    v-bind:title="todo.title" v-on:remove="todos.splice(index,1)">
+  </li>
+  </ul>
+</div>
+
+<div id="lee4">
+<span>Multiline message is:</span>
+<p style="white-space: pre-line;">{{ message }}</p>
+<br>
+<textarea v-model="message" placeholder="add multiple lines"></textarea>
+</div>
+
+<div id="lee5">
+    <button-counter></button-counter>
+  </div>
+  <div id="blog-post-demo">
+<blog-post
+  v-for="post in posts"
+  v-bind:key="post.id"
+  v-bind:title="post.title"
+  v-on:enlarge-text="postFontSize += 0.1"
+></blog-post>
+</div>
+<div id="blog-posts-events-demo">
+    <div :style="{ fontSize: postFontSize + 'em' }">
+      <blog-post
+        v-for="post in posts"
+        v-bind:key="post.id"
+        v-bind:post="post"
+      ></blog-post>
+    </div>
+  </div>
+  <div id="app-3">
+    <p>Using mustaches: {{ message }}</p>
+    <p>Using v-html directive: <span v-html="message"></span></p>
+</div>
+<form id="app" @submit="checkForm" action="https://www.baidu.com/" method="post">
+
+  <p v-if="errors.length">
+    <b>Please correct the following error(s):</b>
+    <ul>
+      <li v-for="error in errors">{{ error }}</li>
+    </ul>
+  </p>
+
+  <p>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" v-model="name">
+  </p>
+
+  <p>
+    <label for="age">Age</label>
+    <input type="number" name="age" id="age" v-model="age" min="0">
+  </p>
+
+  <p>
+    <label for="movie">Favorite Movie</label>
+    <select name="movie" id="movie" v-model="movie">
+      <option>Star Wars</option>
+      <option>Vanilla Sky</option>
+      <option>Atomic Blonde</option>
+    </select>
+  </p>
+
+  <p>
+    <input type="submit" value="Submit">
+  </p>
+
+</form>
+</body>
+
+</html>
+

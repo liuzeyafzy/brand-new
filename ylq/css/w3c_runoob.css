@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+    min-width: 680px;
+}
+
+.message {
+    font-size: 1rem;
+    color: red;
+    font-family: Arial;
+}
+
+blank_space {
+    width: 1rem;
+    color: #36d6ff;
+}
+
+.text {
+    width: 20rem;
+    height: 3rem;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-style: italic;
+}
+
+.section{
+    height: auto;
+}

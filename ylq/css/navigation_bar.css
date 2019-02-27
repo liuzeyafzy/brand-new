@@ -1,0 +1,81 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-size: 16px;
+}
+
+.blank_space{
+    height: 2rem;
+    width: available;
+    background-color: azure;
+}
+
+.nav_bar {
+    height: 160px;
+    background-color: aquamarine;
+}
+
+.nav_bar > ul {
+    list-style: none;
+}
+
+.nav_bar > ul > li.none {
+    float: left;
+    line-height: 2rem;
+    width: 7rem;
+    margin-left: 2rem;
+    border-bottom: solid white .2rem;
+}
+
+.nav_bar > ul > li.bars{
+    float: left;
+    line-height: 2rem;
+    width: 7rem;
+    margin-left: 2rem;
+    border-top: solid cornflowerblue .1rem;
+}
+
+.nav_bar > ul > li > a {
+    background-color: aqua;
+    text-decoration: none;
+    color: black;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 0.3rem;
+    font-family: "Microsoft YaHei UI";
+    font-size: 1.2rem;
+}
+
+.nav_bar li a:hover, .nav_bar li a.on {
+    background-color: antiquewhite;
+}
+
+ul.sec_bar {
+    visibility: hidden;
+    height: 6rem;
+    list-style: none;
+}
+
+ul.sec_bar > li {
+    float: left;
+    line-height: 2rem;
+    width: 100%;
+    border-bottom: solid burlywood .1rem;
+}
+
+ul.sec_bar > li a {
+    background-color: aquamarine;
+    text-decoration: none;
+    color: black;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 0.3rem;
+}
+
+ul.sec_bar > li a:hover, ul.sec_bar > li a.on {
+    background-color: lightcyan;
+}

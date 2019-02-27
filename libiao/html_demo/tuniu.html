@@ -1,0 +1,509 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>途牛旅游网</title>
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            position: relative;
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-bottom: 2px;
+            overflow: hidden;
+            transform: rotatex(0deg);
+        }
+
+        td {
+            position: relative;
+            width: 33.33%;
+            padding-top: 12.98%;
+            border: solid 1px #fff;
+            overflow: hidden;
+        }
+
+        a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 0;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            vertical-align: middle;
+            transform: translateY(-50%);
+            background-color: #2dbb55;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a_a {
+            position: relative;
+            display: block;
+            padding: 0 0 21px 0;
+            height: 22px;
+            line-height: 16px;
+            color: #222;
+            font-size: 12px;
+            text-align: center;
+            font-size: 0;
+            letter-spacing:0px;
+        }
+
+        .a1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 0;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            vertical-align: middle;
+            transform: translateY(-50%);
+            background-color: #f3703c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a2 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 0;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            vertical-align: middle;
+            transform: translateY(-50%);
+            background-color: #4e8ff0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a3 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 0;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            vertical-align: middle;
+            transform: translateY(-50%);
+            background-color: #f3a30e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        header {
+            height: 50px;
+            z-index: 20;
+        }
+
+
+        .div_sea {
+            display: flex;
+            padding-right: 100px;
+            height: 50px;
+            background: #2dbb55;
+            color: #fff;
+        }
+
+        .div_sea .div_left {
+            float: left;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .div_sea .div_left .logo {
+            float: left;
+            width: 30px;
+            height: 30px;
+            padding: 10px 5px 10px 10px;
+            background-clip: content-box;
+            background-size: 30px 30px;
+            margin: 0;
+        }
+
+        .middlelist {
+            position: relative;
+            margin: 3px;
+            font-size: 1.3rem;
+            background-color: #fff;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: top left;
+        }
+
+        .div_sea .center {
+            flex: 1;
+            overflow: hidden;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .div_sea .center .middle {
+            position: relative;
+            margin: 10px 0;
+            padding-left: 10px;
+            line-height: 30px;
+            border-radius: 2px;
+            background: #fff;
+            color: #bbb;
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0;
+        }
+
+        .div_sea .div_left .city {
+            float: left;
+            position: relative;
+            padding: 10px 22px 10px 5px;
+            height: 30px;
+            line-height: 30px;
+            max-width: 64px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 16px;
+        }
+
+        .div_sea .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 50px;
+        }
+
+        .div_sea .right .account {
+            float: left;
+            padding: 15px 0 11px;
+            width: 40px;
+            height: 20px;
+            line-height: 20px;
+            color: #fff;
+        }
+
+        .div_sea .right .navi {
+            float: left;
+            position: relative;
+            font-size: 16px;
+            padding: 17px 22px 13px 5px;
+            height: 20px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+
+        #div-advertise {
+            display: block;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .div_left .city {
+            float: left;
+            position: relative;
+            padding: 10px 22px 10px 5px;
+            height: 30px;
+            line-height: 30px;
+            max-width: 64px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style: none;
+            width: 100%;
+
+        }
+
+        li {
+            float: left;
+            width: 20%;
+            padding: 8px 0 12px;
+        }
+
+        .a_a img {
+            position: relative;
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+        }
+
+        h3 {
+            margin: 0;
+            display: block;
+            font-weight: 500;
+            font-size: 12px;
+            width: 100%;
+            line-height: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .li-span {
+            font-size: 10px;
+            display: inline-block;
+        }
+
+        .li-a {
+            line-height: 12px;
+        }
+
+        .quick_ul {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="div_sea">
+            <div class="div_left">
+                <div class="logo">
+                    <img src="logo.png" alt="tuniu logo" style="position: relative; width: 100%">
+                </div>
+                <div class="city">深圳</div>
+            </div>
+            <div class="center">
+                <div class="middle">
+                    日本
+                </div>
+            </div>
+            <div class="right">
+                <div class="account">
+                    <img src="user.png" alt="user" style="position: relative;width: 100%;">
+                </div>
+
+                <div class="navi">
+                    导航
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id=div-advertise>
+        <img src="ad.jpeg" alt="advertise" style="width: 100%;position: relative;margin: 0%;padding: 0%">
+    </div>
+    <div class="middlelist">
+        <table>
+            <tbody>
+                <tr>
+                    <td rowspan="2">
+                        <a>
+                            <img src="travel.gif" alt="travel">
+                        </a>
+                    </td>
+                    <td>
+                        <a>跟团游</a>
+                    </td>
+                    <td>
+                        <a>游轮游</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>自由行</a>
+                    </td>
+                    <td>
+                        <a>酒店+景点</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>出境游</a>
+                    </td>
+                    <td>
+                        <a>国内游</a>
+                    </td>
+                    <td>
+                        <a>周边游</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <a>
+                            <img src="8.gif" alt="ticket">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="a2">国际机票</a>
+                    </td>
+                    <td>
+                        <a class="a2">火车票·抢票</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="a2">汽车票·包车</a>
+                    </td>
+                    <td>
+                        <a class="a2">租车·接送</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="a1">
+                            <img src="hotel.gif" alt="hotel">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="a1">国际酒店</a>
+                    </td>
+                    <td>
+                        <a class="a1">当地玩乐</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="a3">签证</a>
+                    </td>
+                    <td>
+                        <a class="a3">门票</a>
+                    </td>
+                    <td>
+                        <a class="a3">定制·包团</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="a3">目的地攻略</a>
+                    </td>
+                    <td>
+                        <a class="a3">目的地参团</a>
+                    </td>
+                    <td>
+                        <a class="a3">金融·理财</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="quick">
+        <ul class="quick_ul">
+            <li>
+                <div class=" a_a">
+                    <img class="li-img" src="wifi.png" alt="wifi">
+                    <h3>
+                        <span class="li-span">全球WiFi</span>
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <div class=" a_a">
+                    <img class="li-img" src="oneday.png" alt="oneday">
+                    <h3>
+                        <span class="li-span">一日游</span>
+                    </h3>
+                </div>
+            </li>
+
+            <li>
+                <div class=" a_a">
+                    <img class="li-img" src="wedding.png" alt="wedding">
+                    <h3>
+                        <span class="li-span">婚纱旅拍</span>
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <div class=" a_a">
+                    <img class="li-img" src="topic.png" alt="topic">
+                    <h3>
+                        <span class="li-span">主题游</span>
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <div class=" a_a">
+                    <img class="li-img" src="arrive.png" alt="distruction places">
+                    <h3>
+                        <span class="li-span">目的地大全</span>
+                    </h3>
+                </div>
+            </li>
+
+            <li>
+                <div class=" a_a">
+                    <img class="li-img" src="honeyday.png" alt="honeyday">
+                    <h3>
+                        <span class="li-span">蜜月游</span>
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <div class=" a_a">
+                    <img class="li-img" src="iland.png" alt="seailand">
+                    <h3>
+                        <span class="li-span">海岛游</span>
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <div class=" a_a">
+                    <img class="li-img" src="hot.png" alt="hotplay">
+                    <h3>
+                        <span class="li-span">当季热玩</span>
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <div class=" a_a">
+                    <img class="li-img" src="shopping.png" alt="shopping">
+                    <h3>
+                        <span class="li-span">旅游百货</span>
+                    </h3>
+                </div>
+            </li>
+            <li>
+                <div class="a_a">
+                    <img class="li-img" src="more.png" alt="more">
+                    <h3>
+                        <span class="li-span">更多</span>
+                    </h3>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
