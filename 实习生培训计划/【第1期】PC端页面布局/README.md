@@ -15,4 +15,4 @@
 
 ### 素材：
 
-[百度首页](https://github.com/liuzeyafzy/brand-new/blob/develop/%E5%AE%9E%E4%B9%A0%E7%94%9F%E5%9F%B9%E8%AE%AD%E8%AE%A1%E5%88%92/%E3%80%90%E7%AC%AC1%E6%9C%9F%E3%80%91PC%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/static/images/%E7%99%BE%E5%BA%A6%E9%A6%96%E9%A1%B5.png)
+![百度首页](https://github.com/liuzeyafzy/brand-new/blob/develop/%E5%AE%9E%E4%B9%A0%E7%94%9F%E5%9F%B9%E8%AE%AD%E8%AE%A1%E5%88%92/%E3%80%90%E7%AC%AC1%E6%9C%9F%E3%80%91PC%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/static/images/%E7%99%BE%E5%BA%A6%E9%A6%96%E9%A1%B5.png)
