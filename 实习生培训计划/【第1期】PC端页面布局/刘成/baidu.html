@@ -13,7 +13,6 @@
              height: 800px;
              min-width: 700px;
          }
-
          .head {
              width: 100%;
              height: 30px;
@@ -35,7 +34,7 @@
             margin-right: 8px;
         }
         .right {
-            width: 460px;
+            width: 476px;
             height: 30px;
             box-sizing: border-box;
             position: absolute;
@@ -50,13 +49,57 @@
             float: left;
             margin-right: 16px;
         }
-        .right span {
+        .head-right{
             margin-left: 30px;
-            width: 54px;
+            width: 70px;
             height: 30px;
             float: left;
-            background-color: blue;
             color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        .head-right:hover {
+            height: 900px;
+            border-left: 1px solid #cccccc;
+            box-sizing: border-box;
+            background-color: #efeeee;
+        }
+        .head-right-top {
+            width: 70px;
+            height: 30px;
+            background-color: blue;
+            line-height: 30px;
+        }
+        .head-right ul {
+            list-style: none;
+            font-size: 12px;
+            text-align: center;
+        }
+        .li1 a {
+            text-decoration: none;
+            display: inline-block;
+            height: 70px;
+            width: 70px;
+        }
+        .li1-img {
+            height: 40px;
+            width: 70px;
+        }
+        .li2{
+            display: inline-block;
+            height: 350px;
+            width: 70px;
+        }
+        .head-right img {
+            max-height: 40px;
+            max-width: 40px;
+        }
+        .head-right span {
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+            border-bottom: 1px solid #cccccc;
+            box-sizing: border-box;
         }
         .body {
             height: 620px;
@@ -72,7 +115,6 @@
             margin: 0 auto;
             margin-top: 20px;
             position: relative;
-
         }
         .body-input-input {
             width: 500px;
@@ -141,7 +183,6 @@
             background-color: #cccccc;
             color: white;
         }
-
         .a2 {
             text-decoration: none;
             display: inline-block;
@@ -222,9 +263,67 @@
                         <a href="">设置</a>
                     </li>
                 </ul>
-                <span>
-                      更多产品
-                </span>
+                <div class="head-right">
+                    <div class="head-right-top">
+                        更多产品
+                    </div>
+
+                    <ul>
+                        <li class="li1">
+                            <a href="">
+                                <div class="li1-img">
+                                    <img src="img/nuomi.jpg" alt="">
+                                </div>
+                                <span>糯米</span>
+                            </a>
+                        </li>
+                        <li class="li1">
+                            <a href="">
+                                <div class="li1-img">
+                                    <img src="img/nuomi.jpg" alt="">
+                                </div>
+                                <span>糯米</span>
+                            </a>
+                        </li>
+                        <li class="li1">
+                            <a href="">
+                                <div class="li1-img">
+                                    <img src="img/nuomi.jpg" alt="">
+                                </div>
+                                <span>糯米</span>
+                            </a>
+                        </li>
+                        <li class="li1">
+                            <a href="">
+                                <div class="li1-img">
+                                    <img src="img/nuomi.jpg" alt="">
+                                </div>
+                                <span>糯米</span>
+                            </a>
+                        </li>
+                        <li class="li1">
+                            <a href="">
+                                <div class="li1-img">
+                                    <img src="img/nuomi.jpg" alt="">
+                                </div>
+                                <span>糯米</span>
+                            </a>
+                        </li>
+                        <li class="li1">
+                            <a href="">
+                                <div class="li1-img">
+                                    <img src="img/nuomi.jpg" alt="">
+                                </div>
+                                <span>糯米</span>
+                            </a>
+                        </li>
+                        <li class="li2">
+                            <a href="">
+                                全部产品>>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="body">
@@ -279,7 +378,6 @@
             <div class="foot-bottom">
                  京公安网备11000002000001号
             </div>
-
         </div>
     </div>
 </body>
