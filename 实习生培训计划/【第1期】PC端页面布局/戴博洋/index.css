@@ -50,8 +50,41 @@ header > div >a:hover{
     text-decoration:none;
 }
 .more:hover{
+    background-color: rgb(206, 206, 206);
+    color: #000;
+}
+#more-more{
+    display: none;
+    position: fixed;
+    margin-left: 414px;
+    width: 80px;
+    height: 1249px;
+    background-color: rgb(206, 206, 206);
+}
+#more-more > div{
+    text-align: center;
+    line-height: 100%;
+    margin-top: 50px;
+}
+#sets{
+    display: none;
+    position: absolute;
+    margin-left: 352px;
+    margin-top: 13px;
+    width: 70px;
+    height: 104px;
+    border: 1px solid #b6b6b6;
+}
+#sets > div{
+    width: 70px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 12px;
+}
+#sets > div:hover{
     color: #fff;
-    background-color:#f44;
+    background-color: #3385ff;
 }
 nav > div {
     height: 129px;
@@ -107,7 +140,7 @@ article{
 }
 .a-nav > .watch{
     display: inline-block;
-    margin-left: -20px;
+    margin-left: 0px;
     width: 120px;
     height: 35px;
     background-color: #b6b6b6;
