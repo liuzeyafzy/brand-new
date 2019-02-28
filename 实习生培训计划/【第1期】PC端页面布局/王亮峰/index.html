@@ -49,12 +49,15 @@
             border-bottom: 1px solid #eee;
             position: relative;
             /* line-height: 40px; */
+            height: 40px;
         }
         .clear{
             clear: both;
         }
         .header ul{
             display: block;
+            line-height: 40px;
+            vertical-align: middle;
             /* margin: 9px 0 0px; */
         }
         .header ul li{
@@ -71,7 +74,7 @@
         .header ul li a:hover{
             color: #00c;
         }
-        .header ul>a{
+        .header ul .more{
             text-decoration: none;
             text-align: center;
             background-color: #38f;
@@ -81,8 +84,10 @@
             display: inline-block;
             color: #fff;
         }
-        .header .right{
+        .header .wuyu{
             display: block;
+            margin-left: 20px;
+            height: 1000px;
         }
         .header .left{
             line-height: 40px;
@@ -90,6 +95,7 @@
             margin-left: 15px;
             color: #666;
         }
+        
         .header .left p{
             display: inline-block;
             font-size: 5px;
@@ -114,6 +120,7 @@
         .more{
             position: relative;
             /* display: block; */
+            margin-left: 15px;
         }
         .more .more_commont{
             display: block;
@@ -166,6 +173,9 @@
             margin-bottom: 20px;
             color: red;
         }
+        .container .search .fm{
+            /* border: 1px solid #b6b6b6; */
+        }
         .container .search .content{
             width: 539px;
             height: 30px;
@@ -183,6 +193,11 @@
             font-size: 15px;
             color: #fff;
         }
+        .input_logo{
+            height: 30px;
+            /* margin-right:250px; */
+            vertical-align: middle;
+        }
         .container .concern {
             width: 100%;
             height: 340px;
@@ -193,9 +208,11 @@
             width: 100%;
             height: 50px;
             border-bottom:1px solid #eee;
+            color:rgb(153, 153, 153);display:block;font-family:arial;font-size:12px;
         }
         .concern .my_concern .person{
             text-align: center;
+            
             line-height: 50px;
             display: inline-block;
             width: 140px;
@@ -209,6 +226,13 @@
             height: 20px;
             vertical-align: middle;
             margin-right: 10px;
+        }
+        .footer p,span{
+            color:rgb(153, 153, 153);
+            font-size: 12px;
+        }
+        .footer a{
+            color:rgb(153, 153, 153);
         }
         .concern .my_concern .nav{
             display: inline-block;
@@ -256,16 +280,18 @@
                     <li><a href="#">学术</a></li>
                     <li><a href="#">孙大大大善</a></li>
                     <li><a href="#" class="set">设置</a></li>
-                    <a href="#" class="more">更多产品
-                        <ul class="more_commont" style="display:none">
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
-                        </ul>
-                    </a>
+                    <!-- <div class="wuyu right" style="color:red">  -->
+                            <div href="#" class="more">更多产品
+                                    <!-- <ul class="more_commont" style="display:none">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                    </ul> -->
+                                </div>
+                    <!-- </div> -->
                     
                 </ul>
             <!-- </div> -->
@@ -282,8 +308,15 @@
         <div class="container">
             <div class="search">
                 <img src="images/logo.png" alt="">
-                <form action="/s" class="fm">
+                <form action="/s" class="fm" style="position:relative">
                     <input type="text" class="content"><input type="submit" class="click" value="百度一下" disabled>
+                    <div class="input_logo right" style="position:absolute;top:5px;right: 234px">
+                        <img src="images/search1.png" alt="" style="width:25px;">
+                        <!-- <span style="width:2px;height:10px;border-right:1px solid black"></span> -->
+                        <!-- <img src="" alt="" style="border-left: 1px solid #eee"> -->
+                        <img src="images/search2.png" alt="" style="width:25px; border-left: 1px solid #eee;padding-left: 5px">
+                    </div>
+
                 </form>
                 
             </div>
@@ -305,13 +338,12 @@
             </div>
             <div class="footer" style="margin-top:30px">
                 <p>
-                    <a href="#">设为首页</a>©2019&nbsp;baidu
-                    <a href="#">使用百度前必读</a>nbsp;
-                    <a href="#">意见反馈</a>nbsp;京ICP证030173号
+                    <a href="#">设为首页</a>&nbsp;&nbsp;&nbsp;&nbsp;©2019&nbsp;baidu
+                    <a href="#">使用百度前必读</a>&nbsp;
+                    <a href="#">意见反馈</a>&nbsp;京ICP证030173号
                 </p>
                 <p><img src="images/police.png" alt="" style="width:15px;vertical-align: middle;">
                     京公网安备11000002000001号 
-                    
                 </p>
             </div>
         </div>
@@ -320,9 +352,9 @@
     <script type="text/javascript">
         var set = document.getElementsByClassName("set")[0];
         var setting = document.getElementsByClassName("setting")[0];
+        var wuyu = document.getElementsByClassName("wuyu")[0]
         var more = document.getElementsByClassName("more")[0];
         var more_commont = document.getElementsByClassName("more_commont")[0]
-        console.log(more_commont)
         set.onmouseover = function() {
             setting.style.display = "block"
         }
@@ -330,12 +362,13 @@
             setting.style.display = "none"
         }
         more.onmouseover = function() {
+            wuyu.style.overflow = "visible";
             more_commont.style.display = "block"
         }
         more.onmouseout = function() {
             more_commont.style.display = "none"
         }
-        console.log(set,setting)
+        console.log(wuyu)
     </script>
 </body>
 </html>
