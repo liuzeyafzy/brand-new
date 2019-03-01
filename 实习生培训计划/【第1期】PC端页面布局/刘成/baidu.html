@@ -34,7 +34,7 @@
             margin-right: 8px;
         }
         .right {
-            width: 476px;
+            width: 446px;
             height: 30px;
             box-sizing: border-box;
             position: absolute;
@@ -50,7 +50,7 @@
             margin-right: 16px;
         }
         .head-right{
-            margin-left: 30px;
+            margin-left: -16px;
             width: 70px;
             height: 30px;
             float: left;
@@ -226,6 +226,29 @@
             text-align: center;
             line-height: 20px;
         }
+        .shezi {
+            width: 62px;
+            height: 30px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .shezi:hover {
+            height: 160px;
+        }
+        .shezi2 {
+            height: 120px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 6px;
+            border: 1px solid #000000;
+            text-align: center;
+        }
+         .shezi2 a {
+            text-decoration: none;
+        }
+        .shezi-all {
+            margin-left: -18px;
+        }
     </style>
 </head>
 <body>
@@ -259,8 +282,25 @@
                     <li>
                         <a href="">孙大大大善</a>
                     </li>
-                    <li>
-                        <a href="">设置</a>
+                    <li class="shezi-all">
+                        <div class="shezi">
+                            <a href="">设置</a>
+                            <div class="shezi2">
+                                <a href="">
+                                    搜索设置
+                                </a>
+                                <a href="">
+                                    高级搜索
+                                </a>
+                                <a href="">
+                                    关闭预存
+                                </a>
+                                <a href="">
+                                    隐私设置
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
                 </ul>
                 <div class="head-right">
