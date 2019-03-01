@@ -1,0 +1,175 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    min-width: 1000px;
+}
+a{
+    color: #333;
+}
+header{
+    height: 30px;
+    font-size: 13px;
+    border-bottom:1px solid rgb(180, 180, 180);
+}
+header > div >a:hover{
+    color: #3385ff;
+}
+#h-left{
+    float: left;
+    margin-left: 20px;
+}
+.h-l-weather{
+    height: 24px;
+}
+.you{
+    color: #3385ff;
+}
+#h-right{
+    float: right;
+}
+#h-right > span > a{
+    display: inline-block;
+    margin-top: 7px;
+    margin-right: 15px;
+}
+#h-right > span > a:hover{
+    color: #3385ff;
+}
+.more{
+    float: right;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    margin-right: 15px;
+    background-color: #3385ff;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    text-decoration:none;
+}
+.more:hover{
+    background-color: rgb(206, 206, 206);
+    color: #000;
+}
+#more-more{
+    display: none;
+    position: fixed;
+    margin-left: 414px;
+    width: 80px;
+    height: 1249px;
+    background-color: rgb(206, 206, 206);
+}
+#more-more > div{
+    text-align: center;
+    line-height: 100%;
+    margin-top: 50px;
+}
+#sets{
+    display: none;
+    position: absolute;
+    margin-left: 352px;
+    margin-top: 13px;
+    width: 70px;
+    height: 104px;
+    border: 1px solid #b6b6b6;
+}
+#sets > div{
+    width: 70px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 12px;
+}
+#sets > div:hover{
+    color: #fff;
+    background-color: #3385ff;
+}
+nav > div {
+    height: 129px;
+    width: 270px;
+    margin: 15px auto;
+}
+nav > div > img{
+    height: 129px;
+    width: 270px;
+}
+nav > form{
+    position: relative;
+    height: 33px;
+    width: 640px;
+    margin: 5px auto;
+    border: 1px solid rgb(180, 180, 180);
+}
+nav > form > input{
+    position: absolute;
+    width: 474px;
+    height: 33px;
+    border: 0px;
+}
+nav > form > a > img{
+    float: right;
+    height: 33px;
+}
+nav > form > button{
+    float: right;
+    background-color: #3385ff;
+    font-size: 15px;
+    color: #fff;
+    width:100px;
+    height: 33px;
+}
+article{
+    width: 800px;
+    height: 400px;
+    margin: 0px auto;
+    margin-top: 100px;
+    border: 1px solid rgb(180, 180, 180);
+}
+.a-nav{
+    height: 35px;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+.a-nav > a{
+    text-decoration:none;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 20px;
+}
+.a-nav > .watch{
+    display: inline-block;
+    margin-left: 0px;
+    width: 120px;
+    height: 35px;
+    background-color: #b6b6b6;
+}
+.a-nav > a > img{
+    height: 29px;
+    float: right;
+    margin-right: 8px;
+}
+.a-mynav{
+    width: 720px;
+    margin: 20px auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+.a-custom{
+    margin-left: 40px;
+}
+footer{
+    text-align: center;
+    width: 500px;
+    margin: 20px auto;
+    font-size: 12px;
+    color: rgb(180, 180, 180);
+}
+footer > div > a{
+    font-size: 12px;
+    color: rgb(180, 180, 180);
+}
+footer > div > img {
+    height: 14px;
+}
