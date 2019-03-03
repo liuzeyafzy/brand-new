@@ -17,14 +17,14 @@ body{
 }
 .head{
     height: 790px;
-    width: 100%px;
+    width: 100%;
     background-color:#ffffff;
     margin: auto;
 }
 /*顶部的菜单栏*/
 .head .top_wrapper{
     height: 32px;
-    width: 100%x;
+    width: 100%;
     border-bottom: 1px solid #ebebeb;
     
 }
@@ -202,6 +202,107 @@ em{
     font-size: 13px;
    
 }
+.user_setting{
+    margin-left: 19px;
+    width: 52px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+
+}
+
+.user_setting .user_hidden{
+   width: 70px;
+   position: absolute;
+   text-align: center;
+   border: 1px solid #E3E3E3;
+   left: -9.5px; 
+   border-top: none; 
+}
+.user_setting .user_hidden li{
+    list-style: none;
+    display: none;
+    line-height: 32px;
+    vertical-align: center;
+    width: 70px;
+
+}
+.user_setting .user_hidden li a{
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    display: block;
+    font-size: 12px;
+   text-align: center;
+}
+.user_setting .user_name{
+    display: inline-block;
+    width: 52px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    text-overflow: ellipsis;
+    text-align: center;
+
+}
+
+.user_setting:hover ul li{
+    display: inline-block;
+}
+
+.user_setting ul li:hover a{
+    background: #38f;
+    color: white;
+}
+
+/*设置*/
+.setting{
+    margin-left: 19px;
+    width: 26px;
+    height: 32px;
+    display: inline-block;
+    position: relative;
+
+}
+.setting a{
+    display: inline-block;
+    line-height: 32px;
+    height: 32px;
+    width: 26px;
+    margin: 0;
+
+}
+.setting .setting_hidden{
+   width: 70px;
+   position: absolute;
+   text-align: center;
+   border: 1px solid #E3E3E3;
+   left: -9.5px; 
+   border-top: none;
+}
+
+.setting ul li{
+    display: none;
+    list-style: none;
+    width: 70px;
+    
+
+}
+.setting ul li a{
+    width: 70px;
+    height:32px;
+    display: block;
+    line-height: 32px;
+    text-align: center;
+}
+
+.setting:hover ul li{
+    display: block;
+}
+.setting ul li:hover a{
+    color: white;
+    background-color: #38f;
+}
 /*上部分框架*/
 .head .head_wrapper{
     width: 1000px;
@@ -299,7 +400,7 @@ em{
     background-position: 0 50%;
     background-repeat: no-repeat;
 }
-.voice_icon ::after{
+.voice_icon:after{
     content: "";
     display: inline-block;
     width: 0;
@@ -324,10 +425,11 @@ em{
 /*底部框架*/
 .head .bottom_wrapper,.bottom_box{
     width: 100%;
-    height: 40px;
+    height: 39px;
     color:#999;
     position: absolute;
     bottom: 12px;
+    text-align: center;
     
     
 }
@@ -350,4 +452,20 @@ em{
 .head .bottom_wrapper,.bottom_box .recordcode a{
      text-decoration: none;
      
+}
+
+.bottom_box_top img{
+    width: 13px;
+    height: 16px;
+    display: inline-block;
+}
+.police{
+    display: inline-block;
+    background:url(./img/police.png);
+    width: 14px;
+    height: 16px;
+    background-size: 14px 16px;
+    margin-top: -4px;
+    margin-right: 6px;
+    vertical-align: middle;
 }
