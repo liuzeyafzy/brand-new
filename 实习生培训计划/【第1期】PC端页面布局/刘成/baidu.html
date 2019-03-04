@@ -8,19 +8,22 @@
             margin: 0;
             padding: 0;
         }
-         .all {
-             width: 100%;
-             height: 800px;
-             min-width: 700px;
-         }
-         .head {
-             width: 100%;
-             height: 30px;
-             border-bottom: 1px solid #cccccc;
-             line-height: 30px;
-             box-sizing: border-box;
-             position: relative;
-         }
+        a {
+            color: #333;
+        }
+        .all {
+            width: 100%;
+            height: 800px;
+            min-width: 700px;
+        }
+        .head {
+            width: 100%;
+            height: 30px;
+            border-bottom: 1px solid #cccccc;
+            line-height: 30px;
+            box-sizing: border-box;
+            position: relative;
+        }
         .left {
             width: 210px;
             height: 30px;
@@ -34,7 +37,7 @@
             margin-right: 8px;
         }
         .right {
-            width: 476px;
+            width: 446px;
             height: 30px;
             box-sizing: border-box;
             position: absolute;
@@ -49,11 +52,16 @@
             float: left;
             margin-right: 16px;
         }
+        .clearfix {
+            overflow: hidden;
+            zoom: 1;
+        }
         .head-right{
-            margin-left: 30px;
+            position: absolute;
+            right: 0;
+            top: 0;
             width: 70px;
             height: 30px;
-            float: left;
             color: white;
             text-align: center;
             overflow: hidden;
@@ -96,7 +104,7 @@
         }
         .head-right span {
             display: inline-block;
-            width: 50px;
+            width: 50px;    
             height: 25px;
             border-bottom: 1px solid #cccccc;
             box-sizing: border-box;
@@ -226,159 +234,199 @@
             text-align: center;
             line-height: 20px;
         }
+        .set1 {
+            width: 62px;
+            height: 30px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .set1:hover {
+            height: 160px;
+        }
+        .set2 {
+            height: 120px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 6px;
+            border: 1px solid #000000;
+            text-align: center;
+        }
+        .set2 a {
+            text-decoration: none;
+        }
+        .set-all {
+            margin-left: -18px;
+        }
     </style>
 </head>
 <body>
-    <div class="all">
-        <div class="head">
-            <div class="left">
-                <img src="img/weather.jpg" alt="">
-                <a href="">换肤</a>
-                <a href="">消息</a>
-            </div>
-            <div class="right">
-                <ul>
-                    <li>
-                        <a href="">新闻</a>
-                    </li>
-                    <li>
-                        <a href="">hao123</a>
-                    </li>
-                    <li>
-                        <a href="">地图</a>
-                    </li>
-                    <li>
-                        <a href="">视频</a>
-                    </li>
-                    <li>
-                        <a href="">贴吧</a>
-                    </li>
-                    <li>
-                        <a href="">学术</a>
-                    </li>
-                    <li>
-                        <a href="">孙大大大善</a>
-                    </li>
-                    <li>
+<div class="all">
+    <div class="head">
+        <div class="left">
+            <img src="img/weather.jpg" alt="">
+            <a href="">换肤</a>
+            <a href="">消息</a>
+        </div>
+        <div class="right">
+            <ul>
+                <li>
+                    <a href="">新闻</a>
+                </li>
+                <li>
+                    <a href="">hao123</a>
+                </li>
+                <li>
+                    <a href="">地图</a>
+                </li>
+                <li>
+                    <a href="">视频</a>
+                </li>
+                <li>
+                    <a href="">贴吧</a>
+                </li>
+                <li>
+                    <a href="">学术</a>
+                </li>
+                <li>
+                    <a href="">孙大大大善</a>
+                </li>
+                <li class="set-all">
+                    <div class="set1">
                         <a href="">设置</a>
-                    </li>
-                </ul>
-                <div class="head-right">
-                    <div class="head-right-top">
-                        更多产品
+                        <div class="set2">
+                            <a href="">
+                                搜索设置
+                            </a>
+                            <a href="">
+                                高级搜索
+                            </a>
+                            <a href="">
+                                关闭预存
+                            </a>
+                            <a href="">
+                                隐私设置
+                            </a>
+                        </div>
                     </div>
 
-                    <ul>
-                        <li class="li1">
-                            <a href="">
-                                <div class="li1-img">
-                                    <img src="img/nuomi.jpg" alt="">
-                                </div>
-                                <span>糯米</span>
-                            </a>
-                        </li>
-                        <li class="li1">
-                            <a href="">
-                                <div class="li1-img">
-                                    <img src="img/nuomi.jpg" alt="">
-                                </div>
-                                <span>糯米</span>
-                            </a>
-                        </li>
-                        <li class="li1">
-                            <a href="">
-                                <div class="li1-img">
-                                    <img src="img/nuomi.jpg" alt="">
-                                </div>
-                                <span>糯米</span>
-                            </a>
-                        </li>
-                        <li class="li1">
-                            <a href="">
-                                <div class="li1-img">
-                                    <img src="img/nuomi.jpg" alt="">
-                                </div>
-                                <span>糯米</span>
-                            </a>
-                        </li>
-                        <li class="li1">
-                            <a href="">
-                                <div class="li1-img">
-                                    <img src="img/nuomi.jpg" alt="">
-                                </div>
-                                <span>糯米</span>
-                            </a>
-                        </li>
-                        <li class="li1">
-                            <a href="">
-                                <div class="li1-img">
-                                    <img src="img/nuomi.jpg" alt="">
-                                </div>
-                                <span>糯米</span>
-                            </a>
-                        </li>
-                        <li class="li2">
-                            <a href="">
-                                全部产品>>
-                            </a>
-                        </li>
-                    </ul>
+                </li>
+            </ul>
+            <div class="head-right clearfix">
+                <div class="head-right-top">
+                    更多产品
                 </div>
-            </div>
-        </div>
-        <div class="body">
-            <div class="body-logo">
-                <img src="img/logo.png" alt="">
-            </div>
-            <div class="body-input">
-                <input type="text" class="body-input-input">
-                <button class="body-input-button">百度一下</button>
-                <div class="body-input-logo">
-                    <a href="" class="logo1">
-                        <img src="img/mai.png" alt="">
-                    </a>
-                    <img src="img/1.png" alt="">
-                    <a href="">
-                        <img src="img/can.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="body-foot">
-                <div class="body-foot-top">
-                    <a href="" class="a1">
-                        <div >
-                        </div>
-                        我的关注
-                    </a>
-                    <a href="" class="a2">
-                        推荐
-                    </a>
-                    <a href="" class="a2">
-                        导航
-                    </a>
-                    <a href="" class="img">
-                        <img src="img/ci.png" alt="">
-                    </a>
 
-                </div>
-                <ul class="ul">
-                    <li>我的导航(0)</li>
-                    <li>+自定义</li>
+                <ul>
+                    <li class="li1">
+                        <a href="">
+                            <div class="li1-img">
+                                <img src="img/nuomi.jpg" alt="">
+                            </div>
+                            <span>糯米</span>
+                        </a>
+                    </li>
+                    <li class="li1">
+                        <a href="">
+                            <div class="li1-img">
+                                <img src="img/nuomi.jpg" alt="">
+                            </div>
+                            <span>糯米</span>
+                        </a>
+                    </li>
+                    <li class="li1">
+                        <a href="">
+                            <div class="li1-img">
+                                <img src="img/nuomi.jpg" alt="">
+                            </div>
+                            <span>糯米</span>
+                        </a>
+                    </li>
+                    <li class="li1">
+                        <a href="">
+                            <div class="li1-img">
+                                <img src="img/nuomi.jpg" alt="">
+                            </div>
+                            <span>糯米</span>
+                        </a>
+                    </li>
+                    <li class="li1">
+                        <a href="">
+                            <div class="li1-img">
+                                <img src="img/nuomi.jpg" alt="">
+                            </div>
+                            <span>糯米</span>
+                        </a>
+                    </li>
+                    <li class="li1">
+                        <a href="">
+                            <div class="li1-img">
+                                <img src="img/nuomi.jpg" alt="">
+                            </div>
+                            <span>糯米</span>
+                        </a>
+                    </li>
+                    <li class="li2">
+                        <a href="">
+                            全部产品>>
+                        </a>
+                    </li>
                 </ul>
-            </div>
-        </div>
-        <div class="foot">
-            <div class="foot-top">
-                <a href="">设为首页</a>
-                @2019 Baidu
-                <a href="">使用百度前必读</a>
-                <a href="">意见反馈</a>
-                京ICP证030173号
-            </div>
-            <div class="foot-bottom">
-                 京公安网备11000002000001号
             </div>
         </div>
     </div>
+    <div class="body">
+        <div class="body-logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="body-input">
+            <input type="text" class="body-input-input">
+            <button class="body-input-button">百度一下</button>
+            <div class="body-input-logo">
+                <a href="" class="logo1">
+                    <img src="img/mai.png" alt="">
+                </a>
+                <img src="img/1.png" alt="">
+                <a href="">
+                    <img src="img/can.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="body-foot">
+            <div class="body-foot-top">
+                <a href="" class="a1">
+                    <div >
+                    </div>
+                    我的关注
+                </a>
+                <a href="" class="a2">
+                    推荐
+                </a>
+                <a href="" class="a2">
+                    导航
+                </a>
+                <a href="" class="img">
+                    <img src="img/ci.png" alt="">
+                </a>
+
+            </div>
+            <ul class="ul">
+                <li>我的导航(0)</li>
+                <li>+自定义</li>
+            </ul>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="foot-top">
+            <a href="">设为首页</a>
+            @2019 Baidu
+            <a href="">使用百度前必读</a>
+            <a href="">意见反馈</a>
+            京ICP证030173号
+        </div>
+        <div class="foot-bottom">
+            京公安网备11000002000001号
+        </div>
+    </div>
+</div>
 </body>
 </html>
