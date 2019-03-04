@@ -9,6 +9,9 @@ body{
     text-align: center;
     margin: auto;
 }
+em{
+    font-style: normal;
+}
 /*整个框架*/
 .wrapper{
     height: 100%;
@@ -29,7 +32,6 @@ body{
 .top_wrapper .top_center_box{
     height: 32px;
     width: 100%;
-    min-height: 768px;
     position: relative;
 }
 /*顶部的菜单栏的左侧*/
@@ -105,11 +107,6 @@ body{
     float:left; 
 }
 
-
-
-em{
-    font-style: normal;
-}
 .weather_wrapper .weather_box .weather_mod .city-weather .show_weather .show_city em{
     line-height: 20px;
 }
@@ -305,47 +302,39 @@ em{
 /*上部分框架*/
 .wrapper>.head_wrapper{
     width: 100%;
-    height: 38.2%;
-    min-height: 293px;
-    margin: 0 auto;
-    position: relative;
-    
+    height: 100%;
+    min-width: 1000px; 
 }
 .wrapper>.head_wrapper>.form_wrapper{
     width: 641px;
-    height:382.375px;
-    text-align: left;
+    height:293.38px;
     margin:0 auto 0 auto; 
 }
-.head_wrapper .form_wrapper .form_box{
-    height: 100%;
-    position: relative;
-}
+
 /*log的框架部分*/
-.head_wrapper .form_wrapper .form_box .top_img_wrapper{
+.head_wrapper .form_wrapper .top_img_wrapper{
     text-align: center;
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 641px;
     height: 181px;
-    bottom: 40px;
+   
 }
-.head_wrapper .form_wrapper .form_box .top_img_wrapper img{
+.head_wrapper .form_wrapper .top_img_wrapper img{
     width: 270px;
-    height: 129;
-    position: static;
-    margin-top:33px;
-    bottom: 10px;
+    height: 129px;
+    position:absolute;
+    bottom:10px;
     left: 50%;
+    margin-left: -135px;
 }
 /*搜索栏部分form*/
-.head_wrapper .form_wrapper .form_box form{
-  position: absolute;
-  bottom: 0;
+.head_wrapper .form_wrapper form{
+  display: block;
   width: 640px;
   height: 40px;
 }
 /*输入框的框架部分*/
-.form_wrapper .form_box form .search_wrapper{
+.form_wrapper form .search_wrapper{
    width: 536px;
    height: 40px;
    display:block;
@@ -354,7 +343,7 @@ em{
    
 }
 /*按钮框架部分*/
-.form_wrapper .form_box form .btn_wrapper{
+.form_wrapper form .btn_wrapper{
     background-color: #38f;
     width: 102px;
     height: 38px;
@@ -362,10 +351,10 @@ em{
     border:1px solid #38f;
     border-bottom: 1px solid #2e7ae5;
     float: left;
-    position: absolute;
+   
 }
 /*输入框*/
-.form_wrapper .form_box form .search_wrapper .search_input{
+.form_wrapper form .search_wrapper .search_input{
     height: 20px;
     width: 450px;
     border-right:0;
@@ -375,7 +364,7 @@ em{
     border-bottom:1px solid #ccc
 }
 /*按钮*/
-.form_wrapper .form_box form .btn_wrapper .btn{
+.form_wrapper form .btn_wrapper .btn{
     width: 102px;
     height: 38px;
     color: white;
@@ -386,7 +375,7 @@ em{
 }
 
 /*输入框内的图标*/
-.form_wrapper .form_box form .search_wrapper .voice_icon{
+.form_wrapper  form .search_wrapper .voice_icon{
     background-image: url("./img/voice.png");
     display: inline-block;
     height: 34px;
@@ -409,7 +398,7 @@ em{
     margin: 10px 0 10px 24px;
 
 }
-.form_wrapper .form_box form .search_wrapper .picture_icon{
+.form_wrapper  form .search_wrapper .picture_icon{
     background-image: url("./img/pic.png");
     display: block;
     position: absolute;
@@ -469,15 +458,94 @@ em{
     margin-right: 6px;
     vertical-align: middle;
 }
-/*中间部分内容*/
-.wrapper>.center_wrapper{
+/*中间部分*/
+.center_wrapper{
     width: 100%;
-    height: 470px;
-    min-width: 1000px;
+    height: 405px;
+}
+
+.center_wrapper>.center_content{
+    width: 895px;
+    height: 405px;
+    
+    margin: auto;
+}
+.center_wrapper>.center_content>.center_menus{
+    width: 100%;
+    height: 40px;
     
 }
-.wrapper>.center_wrapper>.center_contenter{
-    width: 895px;
+.center_wrapper>.center_content>.center_menus>.my{
+    height: 39px;
+    width: 124px;
+    border-top: 1px;
+    border-bottom: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+   
+}
+.center_wrapper>.center_content>.center_menus>.my>.my_text{
+    color: #fff;
+    background-color: #9a9da2;
+    font-weight: bold;
+    line-height: 39px;
+}
+.center_menus>.my>.my_content{
+    width: 893px;
+    height: 363px;
+    border: 1px solid #9a9da2;
+}
+.center_menus>.my>.my_content>.title{
+    width: 100%;
+    height: 104px;
+    
+}
+
+.center_menus>.my>.my_content>.title>.title_content{
+    width: 100%;
+    height: 102px;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    
+}
+/*我的导航*/
+.my>.my_content>.title>.title_content>.title_top{
+    width: 100%;
+    height: 36px;
+    text-align: left;
+    padding-bottom: 6px；
+}
+.my>.my_content>.title>.title_content>.title_top>.top_content{
+    width: 844px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid #9a9da2;
+    margin: auto;
+}
+.my>.my_content>.title>.title_content>.title_top>.top_content>.text{
+    width: 56px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.center_menus>.my>.my_content>.manager{
+    width: 893px;
+    height: 30px;
+   
+}
+.my_content>.manager>.manager_content{
+    width: 60px;
+    height: 30px;
+    margin-left: 25px;
+    line-height: 30px; 
+}
+.my_content>.manager>.manager_content>.manager_text{
+    width: 48px;
     height: 100%;
-    margin: 0 auto;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
 }
