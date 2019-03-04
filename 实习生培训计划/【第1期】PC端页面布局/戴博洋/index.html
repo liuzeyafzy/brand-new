@@ -9,98 +9,178 @@
     <script src="./index.js"></script>
 </head>
 <body>
-    <div class="fixed">
-        <header>
-            <div class="h-left">
-                <div class="l-matter">深圳：</div>
-                <div class="weather l-matter">
-                    <img src="./img/weather.png" class="w-logo">
-                </div>
-                <div class="l-matter wendu">19℃</div>
-                <div class="you l-matter">优</div>
-                <div class="l-matter">40</div>
-                <div class="l-matter fenge">|</div>
-                <a href="#" class="left-a">换肤</a>
-                <a href="#" class="left-a">消息</a>
-            </div>
-                <div class="h-right">
-                    <span>
-                        <a href="#" class="r-matter">新闻</a>
-                        <a href="#" class="r-matter">hao123</a>                            
-                        <a href="#" class="r-matter">地图</a>
-                        <a href="#" class="r-matter">视频</a>
-                        <a href="#" class="r-matter">贴吧</a>
-                        <a href="#" class="r-matter">学术</a>
-                        <div class="user expand">
-                            <a href="#" class="user-user r-matter">孙大大大善</a>
-                            <div class="users">
-                                <div>个人中心</div>
-                                <div>用户设置</div>
-                                <div>意见反馈</div>
-                                <div>退出</div>
-                            </div>
+    <header>
+        <div class="h-left">
+            <div class="weathermore">
+                <span class="city">深圳：</span>
+                <img src="./img/weather.jpg" class="today-weather">
+                <span class="wendu">19℃</span>
+                <span class="you">优</span>
+                <span class="shuzi">40</span>
+                <span class="fenge">|</span>
+                <div class="w-more">
+                    <div class="w-more-one">
+                        <span>03月03日</span>
+                        <span class="riqi">农历 正月廿七</span>
+                        <a href="#" class="nextweather">未来七天天气</a>
+                        <span class="w-r-set">
+                            <img src="./img/设置.png" class="r-set">
+                            <a href="#" class="r-zi">设置</a>
+                        </span>
+                    </div>
+                    <div>
+                        <div class="show-weather show-today-weather">
+                            <div class="show-w-one">今天（周日）</div>
+                            <img src="./img/weather.jpg" class="show-logo">
+                            <div class="show-w-xinxi">19℃</div>
+                            <div class="show-w-xinxi">雷阵雨转阴</div>
+                            <div class="show-w-xinxi">无持续风向微风</div>
                         </div>
-                        <div class="set expand">
-                            <a href="#" class="set-set r-matter">设置</a>
-                            <div class="sets">
-                                <div>搜索设置</div>
-                                <div>高级搜索</div>
-                                <div>关闭预测</div>
-                                <div>隐私设置</div>
-                            </div>
+                        <div class="show-weather">
+                            <div class="show-w-one">明天（周一）</div>
+                            <img src="./img/云.png" class="show-logo">
+                            <div class="show-w-xinxi">19℃</div>
+                            <div class="show-w-xinxi">雷阵雨转阴</div>
+                            <div class="show-w-xinxi">无持续风向微风</div>
                         </div>
-                    </span>
-                    <div class="more expand">
-                        <a href="#" class="more-more r-matter">更多产品</a>
-                        <div class="mores">
-                            <div>糯米</div>
-                            <div>音乐</div>
-                            <div>图片</div>
-                            <div>知道</div>
-                            <div>文库</div>
-                            <div>风云榜</div>
-                            <div>全部产品>></div>
+                        <div class="show-weather">
+                            <div class="show-w-one">后天（周二）</div>
+                            <img src="./img/weather.jpg" class="show-logo">
+                            <div class="show-w-xinxi">19℃</div>
+                            <div class="show-w-xinxi">雷阵雨转阴</div>
+                            <div class="show-w-xinxi">无持续风向微风</div>
+                        </div>
+                        <div class="show-weather">
+                            <div class="show-w-one">周三</div>
+                            <img src="./img/rain.jpg" class="show-logo"><div class="show-w-xinxi">19℃</div>
+                            <div class="show-w-xinxi">雷阵雨转阴</div>
+                            <div class="show-w-xinxi">无持续风向微风</div>
+                        </div>
+                        <div class="show-weather">
+                            <div class="show-w-one">周四</div>
+                            <img src="./img/rain.jpg" class="show-logo">
+                            <div class="show-w-xinxi">19℃</div>
+                            <div class="show-w-xinxi">雷阵雨转阴</div>
+                            <div class="show-w-xinxi">无持续风向微风</div>
                         </div>
                     </div>
                 </div>
-        </header>
-        <nav>
-                <div>
-                    <img src="./img/bdlogo.png" class="bdlogo">
+            </div>
+            <a href="#" class="show">换肤</a>
+            <a href="#" class="show">消息</a>
+        </div>
+        <div class="h-right">
+            <span>
+                <a href="#" class="right-li li-big">新闻</a>
+                <a href="#" class="right-li li-big">hao123</a>
+                <a href="#" class="right-li li-big">地图</a>
+                <a href="#" class="right-li li-big">视频</a>
+                <a href="#" class="right-li li-big">贴吧</a>
+                <a href="#" class="right-li li-big">学术</a>
+                <div class="usermore r-moreset">
+                    <a href="#" class="right-li">孙大大大善</a>
+                    <div class="r-user-ul">
+                        <div class="r-user-li">个人中心</div>
+                        <div class="r-user-li">用户设置</div>
+                        <div class="r-user-li">意见反馈</div>
+                        <div class="r-user-li">退出</div>
+                    </div>
                 </div>
-                <form action="#">
-                    <input type="text"></a><button>百度一下</button><a href="#"><img src="./img/voice.png"></a><a href="#"><img src="./img/camera.png"></a>
-                </form>
-        </nav>
-        <article>
-                <div class="a-nav">
-                    <a href="#" class="watch">
-                        我的关注
-                    </a>
-                    <a href="#">推荐</a>
-                    <a href="#">导航</a>
-                    <a href="#">
-                        <img src="./img/set.png">
-                    </a>
+                <div class="sets r-moreset">
+                    <a href="#" class="right-li right-set">设置</a>
+                    <div class="r-set-ul">
+                        <div class="r-set-li">搜索设置</div>
+                        <div class="r-set-li">高级搜索</div>
+                        <div class="r-set-li">关闭预测</div>
+                        <div class="r-set-li">隐私设置</div>
+                    </div>
                 </div>
-                <div class="a-mynav">> 我的导航</div>
-                <div class="a-custom">+ 自定义</div>
-        </article>
-        <footer>
-                <div>
-                    <a href="#">设为首页</a>&nbsp;
-                    <span>©2019 baclassu</span>
-                    <a href="#">使用百度前必读</a>
-                    <a href="#">意见反馈</a>
-                    <span>京IPC证030173号</span>
-                    <img src="./img/logo3.png">
+            </span>
+            <div class="right-li right-mores r-moreset">
+                <a href="#"  class="right-more">更多产品</a>
+                <div class="r-more-ul">
+                    <div class="r-more-li">
+                        <img src="./img/bdnuomi.png" class="r-more-img">
+                        <p>糯米</p>
+                    </div>
+                    <div class="r-more-li">
+                        <img src="./img/music.png" class="r-more-img">
+                        <p>音乐</p>
+                    </div>
+                    <div class="r-more-li">
+                        <img src="./img/bdimage.png" class="r-more-img">
+                        <p>图片</p>
+                    </div>
+                    <div class="r-more-li">
+                        <img src="./img/zhidao.png" class="r-more-img">
+                        <p>知道</p>
+                    </div>
+                    <div class="r-more-li">
+                        <img src="./img/wenku.png" class="r-more-img">
+                        <p>文库</p>
+                    </div>
+                    <div class="r-more-li">
+                        <img src="./img/bang.png" class="r-more-img">
+                        <p>风云榜</p>
+                    </div>
+                    <div class="r-more-li">
+                        <img src="./img/tuiguang.png" class="r-more-img">
+                        <p>百度推广</p>
+                    </div>
+                    <div class="r-more-li">全部产品>></div>
                 </div>
-                <div>
-                    <img src="./img/logo2.png">
-                    <span>京公网安备11000002000001号</span>
-                </div>
-                
-        </footer>
-    </div>
+            </div>
+            
+        </div>
+    </header>
+    <nav>
+        <div class="navbg">
+            <img src="./img/bdlogo.png" class="navbd-logo">
+        </div>
+        <div class="nav-sousuo">
+            <div class="sousuo">
+                <input type="text" class="sousuo-input">
+            <a href="#" class="sousuo-img">
+                <img src="./img/camera.png" class="sousuo-img">
+            </a>
+            <a href="#" class="bdyx">百度一下</a>
+            </div>
+        </div>
+        
+    </nav>
+    <article>
+        <div class="a-nav">
+            <a href="#" class="watch a-nav-a">
+                <img src="./img/user.png" class="watch-img">
+                我的关注
+            </a><a href="#" class="a-nav-a">推荐</a>
+            <a href="#" class="a-nav-a">导航</a>
+            <a href="#" class="nav-set">
+                <img src="./img/set.png" class="nav-set-img">
+            </a>
+        </div>
+        <div class="a-mynav">
+            <img src="./img/三角形.png" class="a-m-img">
+            我的导航(0)
+        </div>
+        <div class="a-custom">
+            <img src="./img/加号.png" class="a-m-img">
+            自定义
+        </div>
+    </article>
+    <footer>
+        <div>
+            <a href="#" class="f-a">设为首页</a>&nbsp;
+            <span>©2019 baidu</span>
+            <a href="#" class="f-a">使用百度前必读</a>
+            <a href="#" class="f-a">意见反馈</a>
+            <span>京IPC证030173号</span>
+            <img src="./img/logo3.png" class="f-img-w">
+        </div>
+        <div>
+            <img src="./img/logo2.png" class="f-img-j">
+            <span>京公网安备11000002000001号</span>
+        </div>
+    </footer>
 </body>
 </html>
