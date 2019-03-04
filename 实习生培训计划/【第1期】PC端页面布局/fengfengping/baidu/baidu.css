@@ -13,34 +13,33 @@ body{
 .wrapper{
     height: 100%;
     width: 100%;
-    
-}
-.head{
-    height: 790px;
-    width: 100%;
     background-color:#ffffff;
-    margin: auto;
+    position: relative;
 }
+
 /*顶部的菜单栏*/
-.head .top_wrapper{
+ .top_wrapper{
+     position: absolute;
+     z-index: 99;;
     height: 32px;
     width: 100%;
     border-bottom: 1px solid #ebebeb;
-    
+    min-width: 1000px;
 }
-.head .top_wrapper .top_center_box{
+.top_wrapper .top_center_box{
     height: 32px;
     width: 100%;
-    position: absolute;
+    min-height: 768px;
+    position: relative;
 }
 /*顶部的菜单栏的左侧*/
-.head .top_wrapper .top_center_box .top_menus_left{
+.top_wrapper .top_center_box .top_menus_left{
     height: 32px;
     width: 314.844px;
     padding-right: 15px;
 }
  /*顶部的菜单栏的右侧*/
- .head .top_wrapper .top_center_box .top_menus_right{
+ .top_wrapper .top_center_box .top_menus_right{
      height: 33px;
      width: 590px;
      position: absolute;
@@ -55,21 +54,21 @@ body{
     
  }
  /*皮肤，消息的框架*/
- .head .top_wrapper .top_center_box .top_menus_left .incon_wrapper{
+  .top_wrapper .top_center_box .top_menus_left .incon_wrapper{
      width: 153px;
      height: 32px;
      float:left;
 
  }
  /*显示天气的盒子*/
- .head .top_wrapper .top_center_box .top_menus_left .weather_wrapper .weather_box{
+.top_wrapper .top_center_box .top_menus_left .weather_wrapper .weather_box{
     width: 145.91px;
     height: 20px;
     margin-top:7px;
     margin-left: 15px;
      
  }
-.head .top_wrapper .top_center_box .top_menus_left .weather_wrapper .weather_box .weather_mod{
+ .top_wrapper .top_center_box .top_menus_left .weather_wrapper .weather_box .weather_mod{
      width: 145.91px;
      height: 20px;
      float: left;
@@ -82,7 +81,7 @@ body{
     display: inline-block;
  }
  /*显示天气总框架*/
- .head .top_wrapper .top_center_box .top_menus_left .weather_wrapper 
+.top_wrapper .top_center_box .top_menus_left .weather_wrapper 
  .weather_box .weather_mod .city-weather .show_weather{
      width: 93.359px;
      height: 20px;
@@ -304,20 +303,21 @@ em{
     background-color: #38f;
 }
 /*上部分框架*/
-.head .head_wrapper{
-    width: 1000px;
+.wrapper>.head_wrapper{
+    width: 100%;
     height: 38.2%;
-    padding-bottom: 370px;
+    min-height: 293px;
     margin: 0 auto;
+    position: relative;
     
 }
-.head .head_wrapper .form_wrapper{
+.wrapper>.head_wrapper>.form_wrapper{
     width: 641px;
-    height: 100%;
+    height:382.375px;
     text-align: left;
     margin:0 auto 0 auto; 
 }
-.head .head_wrapper .form_wrapper .form_box{
+.head_wrapper .form_wrapper .form_box{
     height: 100%;
     position: relative;
 }
@@ -387,8 +387,8 @@ em{
 
 /*输入框内的图标*/
 .form_wrapper .form_box form .search_wrapper .voice_icon{
-    background-image: url("./voice.png");
-    display: block;
+    background-image: url("./img/voice.png");
+    display: inline-block;
     height: 34px;
     width: 24px;
     position: absolute;
@@ -406,11 +406,11 @@ em{
     width: 0;
     height: 14px;
     border-right: 1px solid #e7e7e7;
-    
+    margin: 10px 0 10px 24px;
 
 }
 .form_wrapper .form_box form .search_wrapper .picture_icon{
-    background-image: url("./pic.png");
+    background-image: url("./img/pic.png");
     display: block;
     position: absolute;
     width: 20px;
@@ -423,33 +423,33 @@ em{
 }
 
 /*底部框架*/
-.head .bottom_wrapper,.bottom_box{
+.wrapper>.bottom_wrapper,.bottom_box{
     width: 100%;
-    height: 39px;
+    height: 40px;
     color:#999;
     position: absolute;
-    bottom: 12px;
+    bottom: -18px;
     text-align: center;
-    
-    
+    min-width: 1000px;
+    z-index: 3;
 }
-.head .bottom_wrapper a{
+.bottom_wrapper a{
     text-decoration: underline;
     color:#999;
     font-size: 12px;
 }
-.head .bottom_wrapper span{
+ .bottom_wrapper span{
     color:#999;
 }
-.head .bottom_wrapper,.bottom_box .sethome{
+.bottom_wrapper,.bottom_box .sethome{
     margin-right: 12px;
 } 
-.head .bottom_wrapper,.bottom_box .recordcode{
+.bottom_wrapper,.bottom_box .recordcode{
     padding-top:6px;
     height: 16px;
     width: 100%;
 }
-.head .bottom_wrapper,.bottom_box .recordcode a{
+.bottom_wrapper,.bottom_box .recordcode a{
      text-decoration: none;
      
 }
@@ -468,4 +468,16 @@ em{
     margin-top: -4px;
     margin-right: 6px;
     vertical-align: middle;
+}
+/*中间部分内容*/
+.wrapper>.center_wrapper{
+    width: 100%;
+    height: 470px;
+    min-width: 1000px;
+    
+}
+.wrapper>.center_wrapper>.center_contenter{
+    width: 895px;
+    height: 100%;
+    margin: 0 auto;
 }
