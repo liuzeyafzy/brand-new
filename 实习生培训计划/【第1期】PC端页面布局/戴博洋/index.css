@@ -163,11 +163,6 @@ header{
     color: #fff;
     text-decoration: none;
 }
-/* .right-more:hover{
-    background-color: #f0f0f0;
-    color: #000;
-    height: 41px;
-} */
 .r-user-ul{
     position: absolute;
     display: none;
@@ -332,6 +327,7 @@ article{
     font-size: 14px;
 }
 .a-nav{
+    background-color: #fff;
     position: relative;
     height: 38px;
     font-size: 15px;
@@ -345,19 +341,20 @@ article{
     width: 80px;
     line-height: 39px;
 }
-.a-nav-a:hover{
+.other:hover{
     background-color: #b3b6bb;
+    color: #fff;
+    font-weight: bold;
 }
 .watch{
     margin-left: 0px;
     width: 124px;
     height: 39px;
+}
+.current{
     background-color: #9a9da2;
     color: #fff;
     font-weight: bold;
-}
-.watch:hover{
-    background-color: #9a9da2;
 }
 .watch-img{
     width: 15px;
@@ -421,6 +418,13 @@ article{
     margin-top: 13px;
     margin-bottom: 10px;
     margin: 0px auto;
+}
+.lueimg{
+    width: 843px;
+    margin: 0px auto;
+}
+.tuijianimg,.daohangimg{
+    display: none;
 }
 /********************** article *******************/
 

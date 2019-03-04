@@ -68,6 +68,42 @@ window.onload = function(){
             temp = 0
         }
     }
-
+    var nNavA = document.getElementsByClassName("a-nav-a")
+    var tianjianav = document.getElementsByClassName("tianjianav")[0]
+    var aCustom = document.getElementsByClassName("a-custom")[0]
+    var tuijianimg = document.getElementsByClassName("tuijianimg")[0]
+    var daohangimg = document.getElementsByClassName("daohangimg")[0]
+    var watchImg = document.getElementsByClassName("watch-img")[0]
+    // console.log(nNavA.length)
+        nNavA[0].onclick = function(){
+            nNavA[0].className = "watch a-nav-a current"
+            nNavA[1].className = "a-nav-a other"
+            nNavA[2].className = "a-nav-a other"
+            tianjianav.style.display = "block"
+            aCustom.style.display = "block"
+            tuijianimg.style.display = "none"
+            daohangimg.style.display = "none"
+            watchImg.src = "./img/user.png"
+        }
+        nNavA[1].onclick = function(){
+            nNavA[0].className = "watch a-nav-a other"
+            nNavA[1].className = "a-nav-a current"
+            nNavA[2].className = "a-nav-a other"
+            tianjianav.style.display = "none"
+            aCustom.style.display = "none"
+            tuijianimg.style.display = "block"
+            daohangimg.style.display = "none"
+            watchImg.src = "./img/用户.png"
+        }
+        nNavA[2].onclick = function(){
+            nNavA[0].className = "watch a-nav-a other"
+            nNavA[1].className = "a-nav-a other"
+            nNavA[2].className = "a-nav-a current"
+            tianjianav.style.display = "none"
+            aCustom.style.display = "none"
+            tuijianimg.style.display = "none"
+            daohangimg.style.display = "block"
+            watchImg.src = "./img/用户.png"
+        }
 
 }
