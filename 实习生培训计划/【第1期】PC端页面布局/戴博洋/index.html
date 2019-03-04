@@ -2,88 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>百度首页</title>
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
 </head>
 <body>
-    <header>
-        <div id="h-left">
-            <span>深圳：</span>
-            <img src="./img/weather.png" class="h-l-weather">
-            <span>19℃</span>
-            <span class="you">优</span>
-            <span>40</span>&nbsp;|&nbsp;
-            <a href="#">换肤</a>
-            &nbsp;&nbsp;
-            <a href="#">消息</a>
-        </div>
-        <div id="h-right">
-            <span>
-                <a href="#">新闻</a>
-                <a href="#">hao123</a>
-                <a href="#">地图</a>
-                <a href="#">视频</a>
-                <a href="#">贴吧</a>
-                <a href="#">学术</a>
-                <a href="#">孙大大大善</a>
-                <a href="#" id="set">设置</a>
-            </span>
-            <a href="#" class="more">更多产品</a>
-            <div id="more-more">
-                <div>糯米</div>
-                <div>音乐</div>
-                <div>图片</div>
-                <div>知道</div>
-                <div>文库</div>
-                <div>风云榜</div>
-                <div>全部产品>></div>
+    <div class="fixed">
+        <header>
+            <div class="h-left">
+                <div class="l-matter">深圳：</div>
+                <div class="weather l-matter">
+                    <img src="./img/weather.png" class="w-logo">
+                </div>
+                <div class="l-matter wendu">19℃</div>
+                <div class="you l-matter">优</div>
+                <div class="l-matter">40</div>
+                <div class="l-matter fenge">|</div>
+                <a href="#" class="left-a">换肤</a>
+                <a href="#" class="left-a">消息</a>
             </div>
-            <div id="sets">
-                <div>搜索设置</div>
-                <div>高级搜索</div>
-                <div>关闭预测</div>
-                <div>隐私设置</div>
-            </div>
-        </div>
-    </header>
-    <nav>
-        <div>
-            <img src="./img/bdlogo.png" class="bdlogo">
-        </div>
-        <form action="#">
-            <input type="text"></a><button>百度一下</button><a href="#"><img src="./img/voice.png"></a><a href="#"><img src="./img/camera.png"></a>
-        </form>
-    </nav>
-    <article>
-        <div class="a-nav">
-            <a href="#" class="watch">
-                我的关注
-            </a>
-            <a href="#">推荐</a>
-            <a href="#">导航</a>
-            <a href="#">
-                <img src="./img/set.png">
-            </a>
-        </div>
-        <div class="a-mynav">> 我的导航</div>
-        <div class="a-custom">+ 自定义</div>
-    </article>
-    <footer>
-        <div>
-            <a href="#">设为首页</a>&nbsp;
-            <span>©2019 baidu</span>
-            <a href="#">使用百度前必读</a>
-            <a href="#">意见反馈</a>
-            <span>京IPC证030173号</span>
-            <img src="./img/logo3.png">
-        </div>
-        <div>
-            <img src="./img/logo2.png">
-            <span>京公网安备11000002000001号</span>
-        </div>
-    </footer>
+                <div class="h-right">
+                    <span>
+                        <a href="#" class="r-matter">新闻</a>
+                        <a href="#" class="r-matter">hao123</a>                            
+                        <a href="#" class="r-matter">地图</a>
+                        <a href="#" class="r-matter">视频</a>
+                        <a href="#" class="r-matter">贴吧</a>
+                        <a href="#" class="r-matter">学术</a>
+                        <div class="user expand">
+                            <a href="#" class="user-user r-matter">孙大大大善</a>
+                            <div class="users">
+                                <div>个人中心</div>
+                                <div>用户设置</div>
+                                <div>意见反馈</div>
+                                <div>退出</div>
+                            </div>
+                        </div>
+                        <div class="set expand">
+                            <a href="#" class="set-set r-matter">设置</a>
+                            <div class="sets">
+                                <div>搜索设置</div>
+                                <div>高级搜索</div>
+                                <div>关闭预测</div>
+                                <div>隐私设置</div>
+                            </div>
+                        </div>
+                    </span>
+                    <div class="more expand">
+                        <a href="#" class="more-more r-matter">更多产品</a>
+                        <div class="mores">
+                            <div>糯米</div>
+                            <div>音乐</div>
+                            <div>图片</div>
+                            <div>知道</div>
+                            <div>文库</div>
+                            <div>风云榜</div>
+                            <div>全部产品>></div>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <nav>
+                <div>
+                    <img src="./img/bdlogo.png" class="bdlogo">
+                </div>
+                <form action="#">
+                    <input type="text"></a><button>百度一下</button><a href="#"><img src="./img/voice.png"></a><a href="#"><img src="./img/camera.png"></a>
+                </form>
+        </nav>
+        <article>
+                <div class="a-nav">
+                    <a href="#" class="watch">
+                        我的关注
+                    </a>
+                    <a href="#">推荐</a>
+                    <a href="#">导航</a>
+                    <a href="#">
+                        <img src="./img/set.png">
+                    </a>
+                </div>
+                <div class="a-mynav">> 我的导航</div>
+                <div class="a-custom">+ 自定义</div>
+        </article>
+        <footer>
+                <div>
+                    <a href="#">设为首页</a>&nbsp;
+                    <span>©2019 baclassu</span>
+                    <a href="#">使用百度前必读</a>
+                    <a href="#">意见反馈</a>
+                    <span>京IPC证030173号</span>
+                    <img src="./img/logo3.png">
+                </div>
+                <div>
+                    <img src="./img/logo2.png">
+                    <span>京公网安备11000002000001号</span>
+                </div>
+                
+        </footer>
+    </div>
 </body>
 </html>

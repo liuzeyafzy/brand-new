@@ -8,84 +8,57 @@ body{
 a{
     color: #333;
 }
+/************** header ****************/
 header{
-    height: 30px;
-    font-size: 13px;
-    border-bottom:1px solid rgb(180, 180, 180);
+    height: 32px;
+    font-size: 12px;
+    border-bottom:1px solid #ddd;
+    line-height: 32px;
 }
-header > div >a:hover{
-    color: #3385ff;
+.h-left{
+    display: inline-block;
+    margin-left: 15px;
 }
-#h-left{
-    float: left;
-    margin-left: 20px;
+.l-matter{
+    display: inline-block;
 }
-.h-l-weather{
-    height: 24px;
+.weather{
+    height: 100%;
+    vertical-align: middle;
+    margin-right: 5px;
+    line-height: 100%;
+}
+.w-logo{
+    width: 18px;
+    height: 18px;
+}
+.wendu{
+    margin-right: 9px;
 }
 .you{
-    color: #3385ff;
+    margin-right: 7px;
+    color: #38f;
 }
-#h-right{
-    float: right;
+.fenge{
+    margin-right:11px;
 }
-#h-right > span > a{
+.left-a {
     display: inline-block;
-    margin-top: 7px;
-    margin-right: 15px;
+    margin-right: 19px;
 }
-#h-right > span > a:hover{
-    color: #3385ff;
-}
-.more{
+.h-right{
     float: right;
+    text-align: right;
+    width: 500px;
+}
+.r-matter{
+    margin-left: 19px;
+}
+.expand{
     display: inline-block;
-    width: 80px;
-    height: 30px;
-    margin-right: 15px;
-    background-color: #3385ff;
-    color: #fff;
-    text-align: center;
-    line-height: 30px;
-    text-decoration:none;
 }
-.more:hover{
-    background-color: rgb(206, 206, 206);
-    color: #000;
-}
-#more-more{
-    display: none;
-    position: fixed;
-    margin-left: 414px;
-    width: 80px;
-    height: 1249px;
-    background-color: rgb(206, 206, 206);
-}
-#more-more > div{
-    text-align: center;
-    line-height: 100%;
-    margin-top: 50px;
-}
-#sets{
-    display: none;
-    position: absolute;
-    margin-left: 352px;
-    margin-top: 13px;
-    width: 70px;
-    height: 104px;
-    border: 1px solid #b6b6b6;
-}
-#sets > div{
-    width: 70px;
-    height: 26px;
-    line-height: 26px;
-    text-align: center;
-    font-size: 12px;
-}
-#sets > div:hover{
-    color: #fff;
-    background-color: #3385ff;
-}
+/************** header ****************/
+
 nav > div {
     height: 129px;
     width: 270px;
