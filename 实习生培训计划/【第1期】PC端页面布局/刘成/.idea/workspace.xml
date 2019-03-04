@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="befba6b6-eda8-452c-adbe-5a73d8a9eca2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/nuomi.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baidu.html" beforeDir="false" afterPath="$PROJECT_DIR$/baidu.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/baidu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="64" column="38" lean-forward="true" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+            <state relative-caret-position="100">
+              <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
               <folding>
                 <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <marker date="1551319316803" expanded="true" signature="10750:10880" ph="..." />
@@ -74,7 +72,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="979" />
@@ -91,11 +89,6 @@
             <path>
               <item name="刘成" type="b2602c69:ProjectViewProjectNode" />
               <item name="刘成" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="刘成" type="b2602c69:ProjectViewProjectNode" />
-              <item name="刘成" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -139,16 +132,15 @@
       <option name="presentableId" value="Default" />
       <updated>1551232596424</updated>
       <workItem from="1551232597478" duration="12402000" />
-      <workItem from="1551314698462" duration="4250000" />
+      <workItem from="1551314698462" duration="4748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16652000" />
+    <option name="totallyTimeSpent" value="17150000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="979" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1920" height="979" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15429173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -216,8 +208,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/baidu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="64" column="38" lean-forward="true" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        <state relative-caret-position="100">
+          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
           <folding>
             <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <marker date="1551319316803" expanded="true" signature="10750:10880" ph="..." />
