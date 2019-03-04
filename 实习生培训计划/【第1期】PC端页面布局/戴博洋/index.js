@@ -46,5 +46,28 @@ window.onload = function(){
         rightMore.style.height = "32px"
     }
 
+    var aMynav = document.getElementsByClassName("a-mynav")[0]
+    var aMImg = document.getElementsByClassName("a-m-img")[0]
+    var aMTianzhi = document.getElementsByClassName("a-m-tianzhi")[0]
+    var tianjiatu = document.getElementsByClassName("tianjiatu")[0]
+    aMynav.onmouseover = function(){
+        aMTianzhi.style.display = "block"
+    }
+    aMynav.onmouseout = function(){
+        aMTianzhi.style.display = "none"
+    }
+    var temp = 0
+    aMynav.onclick = function(){
+        if(temp == 0){
+            aMImg.style.transform = "rotate(0deg)"
+            tianjiatu.style.display = "block"
+            temp = 1
+        }else{
+            aMImg.style.transform = "rotate(-90deg)"
+            tianjiatu.style.display = "none"
+            temp = 0
+        }
+    }
+
 
 }
