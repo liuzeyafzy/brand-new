@@ -1,109 +1,120 @@
-window.onload = function(){
-    var weathermore = document.getElementsByClassName("weathermore")[0]
-    var wMore = document.getElementsByClassName("w-more")[0]
-
-    weathermore.onmouseover = function(){
-        wMore.style.display = "block"
+window.onload = function () {
+    var my$ = function (el) {//省略document...
+        return document.getElementsByClassName(el)
     }
-    weathermore.onmouseout = function(){
-        wMore.style.display = "none"
-    }
-
-
-    var usermore = document.getElementsByClassName("usermore")[0]
-    var rUserUl = document.getElementsByClassName("r-user-ul")[0]
-
-    usermore.onmouseover = function(){
-        rUserUl.style.display = "block"
-    }
-    usermore.onmouseout = function(){
-        rUserUl.style.display = "none"
+    var updataStyle = function (el, ess, value) {
+        if (ess == 0) {//0——display
+            return el.style.display = value
+        } else if (ess == 1) {//1——className
+            return el.className = value
+        } else if (ess == 2) {//2——src
+            return el.src = value
+        }
     }
 
-    var sets = document.getElementsByClassName("sets")[0]
-    var rSetUl = document.getElementsByClassName("r-set-ul")[0]
-
-    sets.onmouseover = function(){
-        rSetUl.style.display = "block"
+    var weathermore = my$("weathermore")[0]
+    var wMore = my$("w-more")[0]
+    weathermore.onmouseover = function () {
+        updataStyle(wMore, 0, "block")
     }
-    sets.onmouseout = function(){
-        rSetUl.style.display = "none"
+    weathermore.onmouseout = function () {
+        updataStyle(wMore, 0, "none")
     }
 
-    var rightMores = document.getElementsByClassName("right-mores")[0]
-    var rMoreUl = document.getElementsByClassName("r-more-ul")[0]
-    var rightMore = document.getElementsByClassName("right-more")[0]
-    rightMores.onmouseover = function(){
-        rMoreUl.style.display = "block"
+
+    var usermore = my$("usermore")[0]
+    var rUserUl = my$("r-user-ul")[0]
+    usermore.onmouseover = function () {
+        updataStyle(rUserUl, 0, "block")
+    }
+    usermore.onmouseout = function () {
+        updataStyle(rUserUl, 0, "none")
+    }
+
+    var sets = my$("sets")[0]
+    var rSetUl = my$("r-set-ul")[0]
+    sets.onmouseover = function () {
+        updataStyle(rSetUl, 0, "block")
+    }
+    sets.onmouseout = function () {
+        updataStyle(rSetUl, 0, "none")
+    }
+
+    var rightMores = my$("right-mores")[0]
+    var rMoreUl = my$("r-more-ul")[0]
+    var rightMore = my$("right-more")[0]
+    rightMores.onmouseover = function () {
+        updataStyle(rMoreUl, 0, "block")
         rightMore.style.backgroundColor = "#f0f0f0"
         rightMore.style.color = "#000"
         rightMore.style.height = "41px"
     }
-    rightMores.onmouseout = function(){
-        rMoreUl.style.display = "none"
+    rightMores.onmouseout = function () {
+        updataStyle(rMoreUl, 0, "none")
         rightMore.style.backgroundColor = "#398bfb"
         rightMore.style.color = "#fff"
         rightMore.style.height = "32px"
     }
 
-    var aMynav = document.getElementsByClassName("a-mynav")[0]
-    var aMImg = document.getElementsByClassName("a-m-img")[0]
-    var aMTianzhi = document.getElementsByClassName("a-m-tianzhi")[0]
-    var tianjiatu = document.getElementsByClassName("tianjiatu")[0]
-    aMynav.onmouseover = function(){
-        aMTianzhi.style.display = "block"
+    var aMynav = my$("a-mynav")[0]
+    var aMImg = my$("a-m-img")[0]
+    var aMTianzhi = my$("a-m-tianzhi")[0]
+    var tianjiatu = my$("tianjiatu")[0]
+    aMynav.onmouseover = function () {
+        updataStyle(aMTianzhi, 0, "block")
     }
-    aMynav.onmouseout = function(){
-        aMTianzhi.style.display = "none"
+    aMynav.onmouseout = function () {
+        updataStyle(aMTianzhi, 0, "none")
     }
     var temp = 0
-    aMynav.onclick = function(){
-        if(temp == 0){
+    aMynav.onclick = function () {
+        if (temp == 0) {
             aMImg.style.transform = "rotate(0deg)"
-            tianjiatu.style.display = "block"
+            updataStyle(tianjiatu, 0, "block")
             temp = 1
-        }else{
+        } else {
             aMImg.style.transform = "rotate(-90deg)"
-            tianjiatu.style.display = "none"
+            updataStyle(tianjiatu, 0, "block")
             temp = 0
         }
     }
-    var nNavA = document.getElementsByClassName("a-nav-a")
-    var tianjianav = document.getElementsByClassName("tianjianav")[0]
-    var aCustom = document.getElementsByClassName("a-custom")[0]
-    var tuijianimg = document.getElementsByClassName("tuijianimg")[0]
-    var daohangimg = document.getElementsByClassName("daohangimg")[0]
-    var watchImg = document.getElementsByClassName("watch-img")[0]
-    // console.log(nNavA.length)
-        nNavA[0].onclick = function(){
-            nNavA[0].className = "watch a-nav-a current"
-            nNavA[1].className = "a-nav-a other"
-            nNavA[2].className = "a-nav-a other"
-            tianjianav.style.display = "block"
-            aCustom.style.display = "block"
-            tuijianimg.style.display = "none"
-            daohangimg.style.display = "none"
-            watchImg.src = "./img/user.png"
-        }
-        nNavA[1].onclick = function(){
-            nNavA[0].className = "watch a-nav-a other"
-            nNavA[1].className = "a-nav-a current"
-            nNavA[2].className = "a-nav-a other"
-            tianjianav.style.display = "none"
-            aCustom.style.display = "none"
-            tuijianimg.style.display = "block"
-            daohangimg.style.display = "none"
-            watchImg.src = "./img/用户.png"
-        }
-        nNavA[2].onclick = function(){
-            nNavA[0].className = "watch a-nav-a other"
-            nNavA[1].className = "a-nav-a other"
-            nNavA[2].className = "a-nav-a current"
-            tianjianav.style.display = "none"
-            aCustom.style.display = "none"
-            tuijianimg.style.display = "none"
-            daohangimg.style.display = "block"
-            watchImg.src = "./img/用户.png"
-        }
+
+
+    var nNavA = my$("a-nav-a")
+    var tianjianav = my$("tianjianav")[0]
+    var aCustom = my$("a-custom")[0]
+    var tuijianimg = my$("tuijianimg")[0]
+    var daohangimg = my$("daohangimg")[0]
+    var watchImg = my$("watch-img")[0]
+    nNavA[0].onclick = function () {
+        updataStyle(nNavA[0], 1, "watch a-nav-a current")
+        updataStyle(nNavA[1], 1, "a-nav-a other")
+        updataStyle(nNavA[2], 1, "a-nav-a other")
+        updataStyle(tianjianav, 0, "block")
+        updataStyle(aCustom, 0, "block")
+        updataStyle(tuijianimg, 0, "none")
+        updataStyle(daohangimg, 0, "none")
+        updataStyle(watchImg, 2, "./img/user.png")
+    }
+    nNavA[1].onclick = function () {
+        updataStyle(nNavA[0], 1, "watch a-nav-a other")
+        updataStyle(nNavA[1], 1, "a-nav-a current")
+        updataStyle(nNavA[2], 1, "a-nav-a other")
+        updataStyle(tianjianav, 0, "none")
+        updataStyle(aCustom, 0, "none")
+        updataStyle(tuijianimg, 0, "block")
+        updataStyle(daohangimg, 0, "none")
+        updataStyle(watchImg, 2, "./img/用户.png")
+    }
+    nNavA[2].onclick = function () {
+        updataStyle(nNavA[0], 1, "watch a-nav-a other")
+        updataStyle(nNavA[1], 1, "a-nav-a other")
+        updataStyle(nNavA[2], 1, "a-nav-a current")
+        updataStyle(tianjianav, 0, "none")
+        updataStyle(aCustom, 0, "none")
+        updataStyle(tuijianimg, 0, "none")
+        updataStyle(daohangimg, 0, "block")
+        updataStyle(watchImg, 2, "./img/用户.png")
+    }
 
 }
