@@ -74,7 +74,7 @@ window.onload = function () {
             temp = 1
         } else {
             aMImg.style.transform = "rotate(-90deg)"
-            updataStyle(tianjiatu, 0, "block")
+            updataStyle(tianjiatu, 0, "none")
             temp = 0
         }
     }
