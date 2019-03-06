@@ -1,7 +1,7 @@
 
     $(function(){
         $('.reco span').click(function () {
-            var target = $(this).attr('id');
+            let target = $(this).attr('id');
             $('.info'+target).addClass('active').siblings().removeClass('active');
         })
         
@@ -14,7 +14,7 @@
         })
     
         function change(){
-            var winHeight = $(window).height();
+            let winHeight = $(window).height();
             $('.moredrop').css('height',winHeight);
         }
     
