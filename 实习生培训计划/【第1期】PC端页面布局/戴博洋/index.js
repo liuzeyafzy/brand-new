@@ -2,8 +2,9 @@ window.onload = function () {
     var my$ = function (el) {//省略document...
         return document.getElementsByClassName(el)
     }
-    var updataStyle = function (el, ess, value) {
+    var updataStyle = function (el,ess,value) {
         if (ess == 0) {//0——display
+            // return el.style[type] = value
             return el.style.display = value
         } else if (ess == 1) {//1——className
             return el.className = value
@@ -11,7 +12,7 @@ window.onload = function () {
             return el.src = value
         }
     }
-
+    // updataStyle(el,1,display,"")
     var weathermore = my$("weathermore")[0]
     var wMore = my$("w-more")[0]
     weathermore.onmouseover = function () {
@@ -74,7 +75,7 @@ window.onload = function () {
             temp = 1
         } else {
             aMImg.style.transform = "rotate(-90deg)"
-            updataStyle(tianjiatu, 0, "block")
+            updataStyle(tianjiatu, 0, "none")
             temp = 0
         }
     }
