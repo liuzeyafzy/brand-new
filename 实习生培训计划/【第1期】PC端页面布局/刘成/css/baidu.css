@@ -8,7 +8,7 @@ a {
 .all {
     width: 100%;
     height: 800px;
-    min-width: 700px;
+    min-width: 1050px;
     position: relative;
 }
 .head {
@@ -118,6 +118,7 @@ a {
     margin: 0 auto;
     margin-top: 20px;
     position: relative;
+    display: flex;
 }
 .body-input-input {
     width: 500px;
@@ -128,7 +129,7 @@ a {
     width: 100px;
     background-color: blue;
     color: white;
-    margin-left: -6px;
+    font-size: 16px;
 }
 .body-input-logo {
     height: 30px;

@@ -18,6 +18,7 @@ em{
     width: 100%;
     background-color:#ffffff;
     position: relative;
+    min-height: 800px;
 }
 
 /*顶部的菜单栏*/
@@ -43,7 +44,6 @@ em{
  /*顶部的菜单栏的右侧*/
  .top_wrapper .top_center_box .top_menus_right{
      height: 33px;
-     width: 590px;
      position: absolute;
      right:0px;
      top: 0px;
@@ -137,11 +137,7 @@ em{
       width: 39.359px;
       height: 20px;
 }
-/*显示斜杠*/
-.weather_box .weather_mod .city-weather .show_airpolution .show_vertical{
 
-  
-}
 
 .city-weather .show_airpolution .show_polution_level .show_polution_name{
     color:#38f;
@@ -186,8 +182,7 @@ em{
     
 }
 .top_menus_right .nav_target_blank{
-    width: 86px;
-    height: 32px;
+    height: 31px;
     line-height: 32px;
     color:white;
     background:#398bfb;
@@ -196,7 +191,49 @@ em{
     text-align: center;
     border-bottom: 1px solid #398bfb;
     font-size: 13px;
+    position: relative;
    
+}
+.top_menus_right .nav_target_blank .product{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.top_menus_right .nav_target_blank .blank_hidden{
+    width: 100%;
+    list-style: none;
+    position: absolute;
+   
+}
+.blank_hidden li{
+    display: none;
+}
+.blank_hidden li a{
+    display: block;
+    text-align: center;
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+    font-size: 12px;
+    border-bottom: #f0f0f0 1px solid;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+    text-shadow: none;
+    line-height: 14px
+}
+ .blank_hidden li a img{
+    display: block;
+    height: 36px;
+    width: auto;
+    margin: 10px auto 5px;
+    cursor: pointer;  
+}
+.nav_target_blank:hover ul li{
+    display: block;
+}
+.nav_target_blank ul li:hover a{
+    text-decoration: underline;
 }
 .user_setting{
     margin-left: 19px;
@@ -421,6 +458,7 @@ em{
     text-align: center;
     min-width: 1000px;
     z-index: 3;
+    min-height: 40px;
 }
 .bottom_wrapper a{
     text-decoration: underline;
@@ -463,89 +501,54 @@ em{
     width: 100%;
     height: 405px;
 }
-
-.center_wrapper>.center_content{
-    width: 895px;
-    height: 405px;
-    
-    margin: auto;
-}
-.center_wrapper>.center_content>.center_menus{
-    width: 100%;
-    height: 40px;
-    
-}
-.center_wrapper>.center_content>.center_menus>.my{
-    height: 39px;
-    width: 124px;
-    border-top: 1px;
-    border-bottom: 1px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-   
-}
-.center_wrapper>.center_content>.center_menus>.my>.my_text{
-    color: #fff;
-    background-color: #9a9da2;
-    font-weight: bold;
-    line-height: 39px;
-}
-.center_menus>.my>.my_content{
-    width: 893px;
-    height: 363px;
-    border: 1px solid #9a9da2;
-}
-.center_menus>.my>.my_content>.title{
-    width: 100%;
-    height: 104px;
-    
-}
-
-.center_menus>.my>.my_content>.title>.title_content{
-    width: 100%;
-    height: 102px;
-    margin-top: 13px;
-    margin-bottom: 10px;
-    
-}
-/*我的导航*/
-.my>.my_content>.title>.title_content>.title_top{
-    width: 100%;
-    height: 36px;
-    text-align: left;
-    padding-bottom: 6px；
-}
-.my>.my_content>.title>.title_content>.title_top>.top_content{
-    width: 844px;
-    height: 30px;
-    line-height: 30px;
-    font-weight: bold;
-    border-bottom: 1px solid #9a9da2;
-    margin: auto;
-}
-.my>.my_content>.title>.title_content>.title_top>.top_content>.text{
-    width: 56px;
-    height: 30px;
-    font-size: 14px;
-    line-height: 30px;
-}
-
-.center_menus>.my>.my_content>.manager{
-    width: 893px;
-    height: 30px;
-   
-}
-.my_content>.manager>.manager_content{
-    width: 60px;
-    height: 30px;
-    margin-left: 25px;
-    line-height: 30px; 
-}
-.my_content>.manager>.manager_content>.manager_text{
-    width: 48px;
+.center_wrapper>.center_box{
+    width: 894px;
     height: 100%;
-    color: #333;
-    font-size: 14px;
+    margin: auto;
+    border: 1px solid yellow;
+    
+}
+.center_wrapper>.center_box>.top{
+    width: 100%;
+    height: 39px;
+    border:1px solid #e9e9e9;
+    border-bottom: none;
+    display: flex;
+}
+.center_wrapper>.center_box>.top>.top_title{
+    width: 124px;
+    height: 100%;
+    line-height: 40px;
+    color: #ffffff;
     font-weight: bold;
     display: inline-block;
+    border-right: 1px solid rgb(154, 157, 162);
+    
+}
+.center_wrapper>.center_box>.top>#title_color{
+    background-color: rgb(154, 157, 162);
+    
+}
+#nav_color{
+    color: black;
+}
+.center_wrapper>.center_box>.bottom{
+    width: 100%;
+    height: 393px;
+    position: relative;
+}
+.center_wrapper>.center_box>.bottom>.my_cont{
+    width: 100%;
+    height: 393px;
+    border: 1px solid red;
+    
+}
+.center_wrapper>.center_box>.bottom>.nav_cont{
+    width: 100%;
+    height: 393px;
+    border: 1px solid blue;
+    position: absolute;
+    top: 0;
+    display: none;
+
 }

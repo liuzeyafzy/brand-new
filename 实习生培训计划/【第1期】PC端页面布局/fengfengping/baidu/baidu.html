@@ -90,10 +90,35 @@
                           </li>
                         </ul>
                       </div>
-                      
-                      <a href="javascript:;">
-                        <span class="nav_target_blank">更多产品</span>
-                      </a>
+                      <div class="nav_target_blank">
+                        <a href="" class="product">更多产品</a>
+                        <ul class="blank_hidden">
+                          <li>
+                            <a href="">
+                              <img src="img/bdbri_72.png" alt="">
+                              糯米
+                            </a>
+                          </li>
+                          <li>
+                              <a href="">
+                                  <img src="img/bdbri_72.png" alt="">
+                                  糯米
+                                </a>
+                          </li>
+                          <li>
+                              <a href="">
+                                  <img src="img/bdbri_72.png" alt="">
+                                  糯米
+                                </a>
+                          </li>
+                          <li>
+                              <a href="">
+                                  <img src="img/bdbri_72.png" alt="">
+                                  糯米
+                                </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                 </div>
           </div>
@@ -116,32 +141,19 @@
               </div>
           </div>
           <div class="center_wrapper">
-            <div class="center_content">
-              <div class="center_menus">
-                <div class="my">
-                  <span class="icon"></span>
-                  <div class="my_text">我的关注</div>
-                  <div class="my_content">
-                    <div class="title">
-                      <div class="title_content">
-                        <div class="title_top">
-                          <div class="top_content">
-                            <span class="icon"></span>
-                            <span class="text">我的导航（0）</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="manager">
-                      <div class="manager_content">
-                        <spn class="icon"></spn>
-                        <span class="manager_text">自定义</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="center_box">
+              <div class="top">
+                <span class="top_title" id="title_color">
+                  我的关注
+                </span>
+                <span class="top_title" id="nav_color">
+                  导航
+                </span>
               </div>
-
+              <div class="bottom">
+                <div class="my_cont"></div>
+                <div class="nav_cont"></div>
+              </div>
             </div>
           </div>
           <div class="bottom_wrapper">
@@ -168,5 +180,25 @@
             
          </div>
     </div>
+    <script>
+      var div=document.getElementsByClassName("top_title");
+      var my_cont=document.getElementsByClassName("my_cont")[0];
+      var nav_cont=document.getElementsByClassName("nav_cont")[0];
+      var text_color=document.getElementById("title_color");
+      console.log(my_cont);
+      var cont=[my_cont,nav_cont];
+      var len=div.length;
+      for(var i=0;i<len;i++){
+        (function(n){
+          div[n].onclick=function(){
+             for(var j=0;j<len;j++){
+               cont[j].style.display="none";
+             }
+             cont[n].style.display="block";
+             cont[n].id="text_color";
+          }
+        })(i)
+      }
+    </script>
 </body>
 </html>
