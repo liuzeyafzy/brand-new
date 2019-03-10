@@ -23,6 +23,13 @@ a:hover {
 
 nav {
     border-bottom: 1px solid #ccc;
+    width: 100%;
+
+}
+
+.flex {
+    display: inline-flex;
+    justify-content: space-between;
 }
 
 .left {
@@ -34,7 +41,7 @@ nav {
 }
 
 nav div * {
-    display: inline-block;
+    display: inline-flex;
     font-size: 13px;
     line-height: 32px;
 }
