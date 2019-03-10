@@ -1,483 +1,343 @@
-*{
-padding: 0;
-margin: 0;
-text-decoration: none;
-color:#000; 
-}
 body{
-    font: 12px arial;
-    text-align: center;
-    margin: auto;
+	margin: 0;
+	padding: 0;
+	font: 12px arial;
 }
-/*整个框架*/
 .wrapper{
-    height: 100%;
+	width: 100%;
+	height: 100%;
+}
+.wrapper>.top{
+	width: 100%;
+	height: 32px;
+	border-bottom:1px solid #ebebeb;
+	display: flex;
+	position: relative;
+	min-width: 1000px;
+}
+.wrapper>.top>.top_left{
+	height: 100%;
+	line-height: 32px;
+	list-style: none;
+	display: flex;
+	margin: 0 0 0 15px;
+	padding:0;
+	color: #555;
+
+}
+.wrapper>.top>.top_left>.city_wather{
+	height: 100%;
+	height: 100%;
+}
+.wrapper>.top>.top_left>.city_wather>.a_city_wather{
+	text-decoration: none;
+	width: 36px;
+    height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #555;
+}
+.wrapper>.top>.top_left>.city_wather>.a_city_wather>.polution>.polution_level{
+	color: #38f;
+	font-weight: bold;
+	margin-left: 7px;
+}
+.wrapper>.top>.top_left>.skin{
+	width: 24px;
+	height:100%;
+	margin:0 17px 0 11px;
+	
+}
+.wrapper>.top>.top_left>.skin a{
+	color: #555;
+}
+.wrapper>.top>.top_left>.infor a{
+	width: 100%;
+	height: 100%;
+	color: #555;
+}
+.wrapper>.top>.top_right{
+	height: 100%;
+	position: absolute;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	display: flex;;
+}
+.wrapper>.top>.top_right li{
+	height:100%;
+	list-style: none;
+	margin-left: 19px;
+	line-height: 32px;
+	text-align: center;
+}
+.wrapper>.top>.top_right li a{
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 13px;
+	color: #555;
+}
+.wrapper>.top>.top_right>.user{
+	position: relative;
+}
+.wrapper>.top>.top_right>.user>.user_name{
+	font-weight: normal;
+
+}
+.wrapper>.top>.top_right>.user>.user_hidden{
+	width:60px;
+	position: absolute;
+	top:32px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #E3E3E3;
+	box-shadow: 1px 1px 5px #d1d1d1;
+	display: none; 
+}
+.wrapper>.top>.top_right>.user>.user_hidden a{
+	width: 100%;
+	cursor: pointer;
+	font-size: 12px;
+	text-decoration: none;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	display:block;
+	font-weight: normal;
+
+}
+
+.wrapper>.top>.top_right>.user:hover .user_hidden{
+     display: block;
+}
+.wrapper>.top>.top_right>.user>.user_hidden a:hover{
+	color: #fff;
+	background-color: #398bfb;
+}
+.wrapper>.top>.top_right>.setting{
+	position: relative;
+}
+.wrapper>.top>.top_right>.setting>.setting_name{
+	font-weight: normal;
+}
+.wrapper>.top>.top_right>.setting>.setting_hidden{
+	width:60px;
+	position: absolute;
+	top:32px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #E3E3E3;
+	box-shadow: 1px 1px 5px #d1d1d1;
+	display: none;
+}
+.wrapper>.top>.top_right>.setting>.setting_hidden a{
+	width: 100%;
+	cursor: pointer;
+	font-size: 12px;
+	text-decoration: none;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	display:block;
+	font-weight: normal;
+
+}
+.wrapper>.top>.top_right>.setting:hover .setting_hidden{
+
+display: block;
+}
+.wrapper>.top>.top_right>.setting>.setting_hidden a:hover{
+	color: #fff;
+	background-color: #398bfb;
+
+}
+.wrapper>.top>.top_right>.number{
+	width: 86px;
+	height: 100%;
+	position: relative;
+}
+.wrapper>.top>.top_right>.number>.number_hidden{
+	border: 1px solid  #f0f0f0;
+	border-bottom: none;
+	display: none;
+}
+.wrapper>.top>.top_right>.number>.number_name{
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background-color: #398bfb;
+	line-height: 32px;
+	display: block;
+	text-decoration: none;
+}
+.wrapper>.top>.top_right>.number a{
+	width: 66px;
+	height: 76px;
+	text-align: center;
+	line-height: 14px;
+	font-size: 12px;
+	color: #666;
+	display: block;
+	border-bottom:1px solid  #f0f0f0;
+	margin:0 auto;
+
+}
+.wrapper>.top>.top_right>.number a img{
+	height: 36px;
+	width: auto;
+	margin: 10px auto 5px;
+	cursor: pointer;
+}
+.wrapper>.top>.top_right>.number a span{
+	display: block;
+}
+.wrapper>.top>.top_right>.number:hover .number_hidden{
+	display: block;
+}
+.wrapper>.head{
+	width: 100%;
+	height: 695px;
+}
+.wrapper>.head>.head_box{
+	width: 641px;
+	height:293px;
+	margin: 0 auto;
+	text-align: center;
+}
+.wrapper>.head>.head_box>.head_log{
     width: 100%;
-    background-color:#ffffff;
+    height: 149px;
     position: relative;
-}
-
-/*顶部的菜单栏*/
- .top_wrapper{
-     position: absolute;
-     z-index: 99;;
-    height: 32px;
-    width: 100%;
-    border-bottom: 1px solid #ebebeb;
-    min-width: 1000px;
-}
-.top_wrapper .top_center_box{
-    height: 32px;
-    width: 100%;
-    min-height: 768px;
-    position: relative;
-}
-/*顶部的菜单栏的左侧*/
-.top_wrapper .top_center_box .top_menus_left{
-    height: 32px;
-    width: 314.844px;
-    padding-right: 15px;
-}
- /*顶部的菜单栏的右侧*/
- .top_wrapper .top_center_box .top_menus_right{
-     height: 33px;
-     width: 590px;
-     position: absolute;
-     right:0px;
-     top: 0px;
- }
- /*显示天气的框架*/
- .weather_wrapper{
-    width: 161.844px;
-    height: 34px;
-    float: left;
-    
- }
- /*皮肤，消息的框架*/
-  .top_wrapper .top_center_box .top_menus_left .incon_wrapper{
-     width: 153px;
-     height: 32px;
-     float:left;
-
- }
- /*显示天气的盒子*/
-.top_wrapper .top_center_box .top_menus_left .weather_wrapper .weather_box{
-    width: 145.91px;
-    height: 20px;
-    margin-top:7px;
-    margin-left: 15px;
-     
- }
- .top_wrapper .top_center_box .top_menus_left .weather_wrapper .weather_box .weather_mod{
-     width: 145.91px;
-     height: 20px;
-     float: left;
-     
- }
- 
- .top_menus_left .weather_wrapper .weather_box .weather_mod .city-weather{
-    width: 146.84px;
-    height: 20px;
-    display: inline-block;
- }
- /*显示天气总框架*/
-.top_wrapper .top_center_box .top_menus_left .weather_wrapper 
- .weather_box .weather_mod .city-weather .show_weather{
-     width: 93.359px;
-     height: 20px;
-     float: left;
- }
-/*显示空气质量总框架*/
-.weather_box .weather_mod .city-weather .show_airpolution{
-    width: 53.48px;
-    height: 20px;
-   display:inline-block; 
-   float: left;  
-}
-
-
-
- /*显示所在的城市*/
-.weather_wrapper .weather_box .weather_mod .city-weather .show_weather .show_city{
-    width: 36px;
-    height: 20px;
-    display: inline-block;
-    float:left; 
-}
-
-
-
-em{
-    font-style: normal;
-}
-.weather_wrapper .weather_box .weather_mod .city-weather .show_weather .show_city em{
-    line-height: 20px;
-}
-/*显示图标*/
-.weather_box .weather_mod .city-weather .show_weather .show_icon{ 
-    width: 48.359px;
-    height: 20px;
-    display: inline-block;
-    float:left;
-}
-
-
-/*天气的图片*/
-.weather_box .weather_mod .city-weather .show_weather .show_icon .weather_icon{ 
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    line-height:20px;
-    
-}
-/*显示摄氏度*/
-.weather_box .weather_mod .city-weather .show_weather .show_icon .weather_temp{
-    line-height: 20px;
-    vertical-align: top;
-}
-/*显示空气质量*/
-.weather_box .weather_mod .city-weather .show_airpolution .show_polution_level{
-      width: 39.359px;
-      height: 20px;
-}
-/*显示斜杠*/
-.weather_box .weather_mod .city-weather .show_airpolution .show_vertical{
-
-  
-}
-
-.city-weather .show_airpolution .show_polution_level .show_polution_name{
-    color:#38f;
-    font-weight: bold;
-
-}
-.city-weather .show_airpolution em{
-    margin-right: 7px;
-}
-/*消息，皮肤的a标签*/
-.top_menus_left .incon_wrapper a{
-    height: 32px;
-    display: inline-block;
-    line-height: 32px;
-    text-decoration: underline;
-    margin-right:19px;
-    color: #555;
-    float: left;
-}
-/*顶部菜单栏的右侧*/
-.top_menus_right{
-    width: 590px;
-    position:absolute;
-    right: 0;
-    top:0;
-    color: #999;
-    font-size: 13px;
-    text-align: right; 
-    
-}
-.top_menus_right .menus_right_nav{
-    font-weight:bold;
-    
-}
-.top_menus_right a{
-    text-decoration: underline;
-    margin-left: 19px;
-    height: 32px;
-    line-height: 32px;
-    color: #555;
-    text-align: right;
-    
-}
-.top_menus_right .nav_target_blank{
-    width: 86px;
-    height: 32px;
-    line-height: 32px;
-    color:white;
-    background:#398bfb;
-    text-decoration: none;
-    display:inline-block;
     text-align: center;
-    border-bottom: 1px solid #398bfb;
-    font-size: 13px;
-   
-}
-.user_setting{
-    margin-left: 19px;
-    width: 52px;
-    height: 32px;
-    display: inline-block;
-    position: relative;
 
 }
-
-.user_setting .user_hidden{
-   width: 70px;
-   position: absolute;
-   text-align: center;
-   border: 1px solid #E3E3E3;
-   left: -9.5px; 
-   border-top: none; 
+.wrapper>.head>.head_box>.head_log img{
+	width: 270px;
+	height: 129px;
+	bottom: 10px;
+	
 }
-.user_setting .user_hidden li{
-    list-style: none;
+.wrapper>.head>.head_box>.head_form{
+	width: 100%;
+	height:40px;
+	display: flex;
+	position: relative;
+}
+.wrapper>.head>.head_box>.head_form>.pic_icon{
+	width:20px;
+	height:20px;
+	position:absolute;
+	right:105px; 
+	display: block;
+	margin-top: -8px;
+	top: 50%;
+
+}
+.wrapper>.head>.head_box>.head_form>.pic_icon img{
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper>.head>.head_box>.head_form>.text_input{
+	width: 480px;
+	height: 20px;
+	border: 1px solid #b8b8b8;
+	border-right: none;
+	padding:9px 48px 9px 7px; 
+}
+.wrapper>.head>.head_box>.head_form>.btn{
+	width: 102px;
+	height: 40px;
+	background: #38f;
+	border: 1px solid #38f;
+	cursor: pointer;
+	line-height: 38px;
+	color: white;
+	font-size: 16px;
+
+}
+.wrapper>.head>.center{
+	width: 100%;
+	height: 405px;
+}
+.wrapper>.head>.center>.center_box{
+	width:895px;
+	height: 100%;
+	margin:0 auto;
+	
+}
+.wrapper>.head>.center>.center_box>.box_top{
+	width: 100%;
+	height: 39px;
+	border: 1px solid #e9e9e9;
+	border-bottom: none;
+}
+.wrapper>.head>.center>.center_box>.box_top .nav_list{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	border: 1px solid #e9e9e9;
+}
+.wrapper>.head>.center>.center_box>.box_top .nav_list li{
+	width: 124px;
+	height: 100%;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+.wrapper>.head>.center>.center_box>.box_top .nav_list>.act{
+	color: white;
+	background-color: #9a9da2;
+}
+.wrapper>.head>.center>.center_box>.box_bottom{
+	width: 100%;
+	height:355px;
+	position: relative;
+}
+.wrapper>.head>.center>.center_box>.box_bottom>.my_cont{
+    width: 100%;
+    height:354px;
+    border:1px solid #e9e9e9;
+    border-top: none;
+}
+.wrapper>.head>.center>.center_box>.box_bottom>.nav_cont{
+	width: 100%;
+    height:354px;
+    border:1px solid red;
+    border-top: none;
     display: none;
-    line-height: 32px;
-    vertical-align: center;
-    width: 70px;
 
 }
-.user_setting .user_hidden li a{
-    height: 32px;
-    line-height: 32px;
-    margin: 0;
-    display: block;
-    font-size: 12px;
-   text-align: center;
+.wrapper>.foot{
+	width: 100%;
+	height: 39px;
 }
-.user_setting .user_name{
-    display: inline-block;
-    width: 52px;
-    height: 32px;
-    line-height: 32px;
-    margin: 0;
-    text-overflow: ellipsis;
-    text-align: center;
-
+.wrapper>.foot>.foot_top{
+	text-align: center;
+	width:100%;
+	height: 17px;
+	margin: 0 auto;
+	color:#999;
 }
-
-.user_setting:hover ul li{
-    display: inline-block;
-}
-
-.user_setting ul li:hover a{
-    background: #38f;
-    color: white;
-}
-
-/*设置*/
-.setting{
-    margin-left: 19px;
-    width: 26px;
-    height: 32px;
-    display: inline-block;
-    position: relative;
-
-}
-.setting a{
-    display: inline-block;
-    line-height: 32px;
-    height: 32px;
-    width: 26px;
-    margin: 0;
-
-}
-.setting .setting_hidden{
-   width: 70px;
-   position: absolute;
-   text-align: center;
-   border: 1px solid #E3E3E3;
-   left: -9.5px; 
-   border-top: none;
-}
-
-.setting ul li{
-    display: none;
-    list-style: none;
-    width: 70px;
-    
-
-}
-.setting ul li a{
-    width: 70px;
-    height:32px;
-    display: block;
-    line-height: 32px;
-    text-align: center;
-}
-
-.setting:hover ul li{
-    display: block;
-}
-.setting ul li:hover a{
-    color: white;
-    background-color: #38f;
-}
-/*上部分框架*/
-.wrapper>.head_wrapper{
-    width: 100%;
-    height: 38.2%;
-    min-height: 293px;
-    margin: 0 auto;
-    position: relative;
-    
-}
-.wrapper>.head_wrapper>.form_wrapper{
-    width: 641px;
-    height:382.375px;
-    text-align: left;
-    margin:0 auto 0 auto; 
-}
-.head_wrapper .form_wrapper .form_box{
-    height: 100%;
-    position: relative;
-}
-/*log的框架部分*/
-.head_wrapper .form_wrapper .form_box .top_img_wrapper{
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: 181px;
-    bottom: 40px;
-}
-.head_wrapper .form_wrapper .form_box .top_img_wrapper img{
-    width: 270px;
-    height: 129;
-    position: static;
-    margin-top:33px;
-    bottom: 10px;
-    left: 50%;
-}
-/*搜索栏部分form*/
-.head_wrapper .form_wrapper .form_box form{
-  position: absolute;
-  bottom: 0;
-  width: 640px;
-  height: 40px;
-}
-/*输入框的框架部分*/
-.form_wrapper .form_box form .search_wrapper{
-   width: 536px;
-   height: 40px;
-   display:block;
-   float: left;
-   position: relative;
-   
-}
-/*按钮框架部分*/
-.form_wrapper .form_box form .btn_wrapper{
-    background-color: #38f;
-    width: 102px;
-    height: 38px;
-    display: inline-block;
-    border:1px solid #38f;
-    border-bottom: 1px solid #2e7ae5;
-    float: left;
-    position: absolute;
-}
-/*输入框*/
-.form_wrapper .form_box form .search_wrapper .search_input{
-    height: 20px;
-    width: 450px;
-    border-right:0;
-    padding-right: 78px !important;
-    padding: 9px 7px;
-    border:1px solid #b8b8b8;
-    border-bottom:1px solid #ccc
-}
-/*按钮*/
-.form_wrapper .form_box form .btn_wrapper .btn{
-    width: 102px;
-    height: 38px;
-    color: white;
-    background-color:#38f;
-    font-size: 16px;
-    line-height: 38px; 
-    border: 0;
-}
-
-/*输入框内的图标*/
-.form_wrapper .form_box form .search_wrapper .voice_icon{
-    background-image: url("./img/voice.png");
-    display: inline-block;
-    height: 34px;
-    width: 24px;
-    position: absolute;
-    right: 41px;
-    z-index: 1;
-    left: initial;
-    top: 3px;
-    background-size: 20px 22px;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-}
-.voice_icon:after{
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 14px;
-    border-right: 1px solid #e7e7e7;
-    margin: 10px 0 10px 24px;
-
-}
-.form_wrapper .form_box form .search_wrapper .picture_icon{
-    background-image: url("./img/pic.png");
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 18px;
-    right: 11px;
-    margin-top: -8px;
-    top: 50%;
-    z-index: 1;
-    background-size: cover;
-}
-
-/*底部框架*/
-.wrapper>.bottom_wrapper,.bottom_box{
-    width: 100%;
-    height: 40px;
-    color:#999;
-    position: absolute;
-    bottom: -18px;
-    text-align: center;
-    min-width: 1000px;
-    z-index: 3;
-}
-.bottom_wrapper a{
-    text-decoration: underline;
-    color:#999;
-    font-size: 12px;
-}
- .bottom_wrapper span{
+.wrapper>.foot>.foot_top a{
     color:#999;
 }
-.bottom_wrapper,.bottom_box .sethome{
-    margin-right: 12px;
-} 
-.bottom_wrapper,.bottom_box .recordcode{
-    padding-top:6px;
-    height: 16px;
-    width: 100%;
+.wrapper>.foot>.foot_top img{
+	width: 13px;
+	height: 16px;
 }
-.bottom_wrapper,.bottom_box .recordcode a{
-     text-decoration: none;
-     
+.wrapper>.foot>.foot_bottom{
+	width: 100%;
+	height: 22px;
+	text-align: center;
+	color:#999; 
 }
-
-.bottom_box_top img{
-    width: 13px;
-    height: 16px;
-    display: inline-block;
-}
-.police{
-    display: inline-block;
-    background:url(./img/police.png);
-    width: 14px;
-    height: 16px;
-    background-size: 14px 16px;
-    margin-top: -4px;
-    margin-right: 6px;
-    vertical-align: middle;
-}
-/*中间部分内容*/
-.wrapper>.center_wrapper{
-    width: 100%;
-    height: 470px;
-    min-width: 1000px;
-    
-}
-.wrapper>.center_wrapper>.center_contenter{
-    width: 895px;
-    height: 100%;
-    margin: 0 auto;
+.wrapper>.foot>.foot_bottom img{
+	width: 14px;
+	height: 16px;
 }
